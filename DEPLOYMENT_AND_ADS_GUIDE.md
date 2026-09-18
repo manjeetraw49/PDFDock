@@ -1,10 +1,44 @@
-# PDFDock: Free Netlify Deployment & Ad Setup Guide
+# PDFDock: Free Vercel & Netlify Deployment & Ad Setup Guide
 
-This guide explains how to deploy **PDFDock** and its full suite of **18 free document tools** live to the web using Netlify for free, and how to monetize traffic using **Adsterra** and **Monetag**.
+This guide explains how to deploy **PDFDock** and its full suite of **19 free document tools** live to the web using **Vercel** or **Netlify** for free, and how to monetize traffic using **Adsterra** and **Monetag**.
 
 ---
 
-## 1. How to Upload PDFDock for Free Using Netlify
+## 1. How to Deploy on Vercel (Recommended)
+
+Vercel provides blazing-fast global Edge CDN hosting, automatic SSL (HTTPS), zero-config clean URLs, and automatic continuous deployment on every git push.
+
+### Method A: Deploy via GitHub (1-Click & Recommended)
+1. Push your local repository to your GitHub account:
+   ```bash
+   git push -u origin main
+   ```
+2. Open **[vercel.com](https://vercel.com)** and log in with your GitHub account.
+3. Click **"Add New..."** &rarr; **"Project"**.
+4. In the repository list, find **`manjeetraw49/PDFDock`** and click **"Import"**.
+5. In the configuration dialog:
+   - **Framework Preset**: `Other` (detected automatically).
+   - **Root Directory**: `./` (default).
+   - **Build Command**: Automatically configured from `package.json`.
+   - **Output Directory**: Leave empty / default.
+6. Click **"Deploy"**.
+7. In ~15 seconds, your site is live globally at **`https://pdfdock.vercel.app`**!
+
+### Method B: Deploy via Vercel CLI
+1. Open PowerShell in `c:\Users\HP\Downloads\PDF Website`.
+2. Run:
+   ```bash
+   npx vercel
+   ```
+3. Follow the simple prompts (press Enter to accept default settings).
+4. Deploy to your production domain:
+   ```bash
+   npx vercel --prod
+   ```
+
+---
+
+## 2. How to Upload PDFDock for Free Using Netlify (Alternative)
 
 Netlify hosts static multi-page websites completely free with automatic SSL (HTTPS), high-speed global CDN, and unlimited page views within fair use.
 
