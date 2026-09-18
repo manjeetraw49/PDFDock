@@ -217,22 +217,6 @@ tools_data = [
         "mode": "add_image"
     },
     {
-        "id": "add-image",
-        "file": "add-image.html",
-        "title": "Add Image to PDF",
-        "full_title": "Add Image & Stamp to PDF",
-        "category": "edit",
-        "category_label": "Edit & Security",
-        "badge": "Stamp",
-        "sentence": "This tool is a free PDF image stamper designed for photographers, designers, and managers to place logos, watermarks, photos, and stamps onto PDF pages.",
-        "accept": ".pdf,image/*,application/pdf",
-        "multiple": True,
-        "icon": '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',
-        "box_title": "Drop your PDF file here",
-        "box_sub": "add photos, company logos, and official stamps",
-        "mode": "add_image"
-    },
-    {
         "id": "protect-pdf",
         "file": "protect-pdf.html",
         "title": "Protect PDF",
@@ -683,35 +667,6 @@ seo_geo_data = {
             {"name": "Upload Document", "text": "Select the contract or document requiring signature."},
             {"name": "Create Signature", "text": "Draw with your finger/mouse, type in cursive, or upload an existing signature image."},
             {"name": "Place & Download", "text": "Position the signature on the appropriate page, preview, and download your signed PDF."}
-        ]
-    },
-    "add-image": {
-        "keywords": ["add image to pdf", "insert image into pdf", "put picture on pdf", "add logo to pdf", "insert photo in pdf online", "add picture to pdf free", "attach image to pdf"],
-        "meta_desc": "Insert images, company logos, photos, and stamps into PDF documents online for free. Drag, resize, and position picture stamps on any page with live preview.",
-        "specs": {
-            "inputs": "PDF (.pdf) + Images (.png, .jpg)",
-            "output": "Enhanced PDF (.pdf)",
-            "privacy": "100% In-Browser (0 Server Uploads)",
-            "speed": "Visual Drag-to-Position Canvas"
-        },
-        "faqs": [
-            {
-                "q": "Can I add transparent PNG logos to my PDF?",
-                "a": "Yes, PNG images with transparency are supported and overlay cleanly on your PDF pages."
-            },
-            {
-                "q": "Can I choose which page the image appears on?",
-                "a": "Yes, you can position and scale your image stamp onto any page of the PDF before exporting the final file."
-            },
-            {
-                "q": "Are my photos or documents sent to a cloud server?",
-                "a": "No, image placement and PDF recompilation are executed 100% client-side inside your browser."
-            }
-        ],
-        "howto_steps": [
-            {"name": "Upload PDF & Image", "text": "Select your PDF document and choose the photo or logo image to insert."},
-            {"name": "Scale & Position", "text": "Drag the image stamp to your target location and adjust its dimensions."},
-            {"name": "Preview & Save", "text": "Preview the stamped PDF and download the final high-resolution document."}
         ]
     },
     "protect-pdf": {
@@ -3799,7 +3754,7 @@ sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 
 with open("sitemap.xml", "w", encoding="utf-8") as f:
     f.write(sitemap_xml)
-print("Generated sitemap.xml with all 20 URLs")
+print(f"Generated sitemap.xml with all {len(sitemap_urls)} URLs")
 
 robots_txt = """User-agent: *
 Allow: /
@@ -3810,5 +3765,5 @@ with open("robots.txt", "w", encoding="utf-8") as f:
     f.write(robots_txt)
 print("Generated robots.txt")
 
-print("ALL 20 PAGES + SITEMAP.XML + ROBOTS.TXT GENERATED WITH SEO, GEO & VERCEL READINESS!")
+print(f"ALL {len(tools_data) + 1} PAGES + SITEMAP.XML + ROBOTS.TXT GENERATED WITH SEO, GEO & VERCEL READINESS!")
 

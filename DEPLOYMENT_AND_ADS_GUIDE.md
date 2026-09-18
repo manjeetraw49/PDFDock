@@ -30,7 +30,6 @@ Netlify hosts static multi-page websites completely free with automatic SSL (HTT
    - `png-to-pdf.html`
    - `pdf-to-text.html`
    - `add-text.html`
-   - `add-image.html`
    - `protect-pdf.html`
    - `word-to-pdf.html`
    - `excel-to-pdf.html`
