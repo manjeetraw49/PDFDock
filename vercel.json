@@ -3,6 +3,12 @@
   "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/google951b33abc70cfe21.html",
+      "destination": "/google951b33abc70cfe21.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.(css|js|svg|png|jpg|jpeg|webp|ico|woff|woff2)",

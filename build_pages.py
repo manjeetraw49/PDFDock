@@ -1592,6 +1592,7 @@ for tool in tools_data:
   <meta name="keywords" content="{tool_keywords_str}">
   <link rel="canonical" href="{canonical_url}">
   <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="google951b33abc70cfe21">
 
   <!-- OpenGraph / Social Metadata (GEO & Rich Snippets) -->
   <meta property="og:title" content="{tool["full_title"]} - Free Online Tool | PDFDock">
@@ -3479,6 +3480,7 @@ index_html = f"""<!DOCTYPE html>
   <meta name="keywords" content="online pdf tools, pdf editor free, convert pdf online, free pdf tools no signup, merge compress pdf, pdf converter, client side pdf tools">
   <link rel="canonical" href="https://pdfdock.vercel.app/">
   <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="google951b33abc70cfe21">
 
   <!-- OpenGraph / Social (GEO Metadata) -->
   <meta property="og:title" content="PDFDock - Everything You Need, All in One Place">
