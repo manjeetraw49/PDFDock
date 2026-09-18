@@ -127,7 +127,13 @@
   </script>
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2.5">
+  <style>
+    .smartlink-banner-link { text-decoration: none !important; }
+    .smartlink-card:hover { transform: translateY(-2px); border-color: #e11d48 !important; }
+    .smartlink-card:hover .smartlink-action { background: #e11d48 !important; }
+    .sponsored-recommendation-link:hover { border-color: #e11d48 !important; background: #fff !important; }
+  </style>
 
   <!-- ADSTERRA / MONETAG HEADER SCRIPT PLACEHOLDER -->
   <!-- START HEADER AD CODE -->
@@ -198,19 +204,18 @@
 
 
   
-  <!-- Top Monetag SmartLink Sponsored Banner -->
-  <aside class="ad-container ad-banner-top" id="ad-top" aria-label="Sponsored Recommendation">
-    <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="smartlink-banner-link" title="Explore Partner Cloud Services">
-      <div class="smartlink-card">
-        <span class="smartlink-badge">Sponsored</span>
-        <div class="smartlink-icon">
+  <aside class="ad-container ad-banner-top" id="ad-top" aria-label="Sponsored Recommendation" style="width: 100%; max-width: 760px; margin: 1.25rem auto; padding: 0 1rem; display: flex; justify-content: center; box-sizing: border-box;">
+    <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="smartlink-banner-link" style="display: block; width: 100%; text-decoration: none !important; color: inherit;" title="Explore Partner Offers">
+      <div class="smartlink-card" style="width: 100%; background: #ffffff; background-image: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: relative; text-decoration: none !important; box-sizing: border-box; transition: transform 0.2s ease, border-color 0.2s ease;">
+        <span class="smartlink-badge" style="position: absolute; top: 8px; right: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; background: #f1f5f9; padding: 2px 7px; border-radius: 4px; text-decoration: none !important;">Sponsored</span>
+        <div class="smartlink-icon" style="width: 42px; height: 42px; min-width: 42px; border-radius: 10px; background: #ffe4e6; color: #e11d48; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <div class="smartlink-info">
-          <span class="smartlink-title">⚡ Fast Cloud Storage &amp; Secure File Transfer</span>
-          <span class="smartlink-desc">Free high-speed file storage, document backup &amp; instant sharing offers.</span>
+        <div class="smartlink-info" style="flex: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; text-decoration: none !important;">
+          <span class="smartlink-title" style="font-size: 14.5px; font-weight: 700; color: #0f172a; text-decoration: none !important; line-height: 1.35; display: block;">Fast Cloud Storage &amp; Secure File Transfer</span>
+          <span class="smartlink-desc" style="font-size: 12.5px; color: #64748b; text-decoration: none !important; line-height: 1.35; display: block;">Free high-speed file storage, document backup &amp; instant sharing offers.</span>
         </div>
-        <span class="smartlink-action">Explore Deals &rarr;</span>
+        <span class="smartlink-action" style="background: #0f172a; color: #ffffff; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 8px; white-space: nowrap; flex-shrink: 0; text-decoration: none !important; display: inline-block;">Explore Deals &rarr;</span>
       </div>
     </a>
   </aside>
@@ -336,12 +341,12 @@
           </button>
         </div>
         
-        <div class="sponsored-recommendation-box">
-          <span class="sponsored-badge">Sponsored Recommendation</span>
+        <div class="sponsored-recommendation-box" style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed #e2e8f0; text-align: center; width: 100%; box-sizing: border-box;">
+          <span class="sponsored-badge" style="display: inline-block; font-size: 10.5px; text-transform: uppercase; font-weight: 700; color: #94a3b8; letter-spacing: 0.05em; margin-bottom: 6px;">Sponsored Recommendation</span>
           <br>
-          <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="sponsored-recommendation-link">
-            <span class="sponsored-link-icon">⚡</span>
-            <span class="sponsored-link-text">Need fast, unlimited cloud storage for your files? <strong>Explore Free Cloud Partner &rarr;</strong></span>
+          <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="sponsored-recommendation-link" style="display: inline-flex; align-items: center; gap: 8px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 16px; color: #334155; text-decoration: none !important; font-size: 13px; box-sizing: border-box;">
+            <span class="sponsored-link-icon" style="font-size: 16px; text-decoration: none !important;">⚡</span>
+            <span class="sponsored-link-text" style="color: #334155; text-decoration: none !important;">Need fast, unlimited cloud storage for your files? <strong style="color: #e11d48; text-decoration: underline !important;">Explore Free Cloud Partner &rarr;</strong></span>
           </a>
         </div>
 
@@ -366,12 +371,12 @@
           </button>
         </div>
         
-        <div class="sponsored-recommendation-box">
-          <span class="sponsored-badge">Sponsored Recommendation</span>
+        <div class="sponsored-recommendation-box" style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed #e2e8f0; text-align: center; width: 100%; box-sizing: border-box;">
+          <span class="sponsored-badge" style="display: inline-block; font-size: 10.5px; text-transform: uppercase; font-weight: 700; color: #94a3b8; letter-spacing: 0.05em; margin-bottom: 6px;">Sponsored Recommendation</span>
           <br>
-          <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="sponsored-recommendation-link">
-            <span class="sponsored-link-icon">⚡</span>
-            <span class="sponsored-link-text">Need fast, unlimited cloud storage for your files? <strong>Explore Free Cloud Partner &rarr;</strong></span>
+          <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="sponsored-recommendation-link" style="display: inline-flex; align-items: center; gap: 8px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 16px; color: #334155; text-decoration: none !important; font-size: 13px; box-sizing: border-box;">
+            <span class="sponsored-link-icon" style="font-size: 16px; text-decoration: none !important;">⚡</span>
+            <span class="sponsored-link-text" style="color: #334155; text-decoration: none !important;">Need fast, unlimited cloud storage for your files? <strong style="color: #e11d48; text-decoration: underline !important;">Explore Free Cloud Partner &rarr;</strong></span>
           </a>
         </div>
 
@@ -380,22 +385,21 @@
     </section>
 
     
-    <!-- Mid Monetag SmartLink Sponsored Banner -->
-    <aside class="ad-container ad-banner-mid" id="ad-mid" aria-label="Sponsored Recommendation">
-      <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="smartlink-banner-link" title="Special Partner Deals">
-        <div class="smartlink-card">
-          <span class="smartlink-badge">Partner Offer</span>
-          <div class="smartlink-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          </div>
-          <div class="smartlink-info">
-            <span class="smartlink-title">📁 Premium Productivity Apps &amp; Cloud Tools</span>
-            <span class="smartlink-desc">Special offers on document utilities, cloud backup, and PDF software.</span>
-          </div>
-          <span class="smartlink-action">Get Access &rarr;</span>
+  <aside class="ad-container ad-banner-mid" id="ad-mid" aria-label="Sponsored Recommendation" style="width: 100%; max-width: 760px; margin: 1.25rem auto; padding: 0 1rem; display: flex; justify-content: center; box-sizing: border-box;">
+    <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="smartlink-banner-link" style="display: block; width: 100%; text-decoration: none !important; color: inherit;" title="Explore Partner Offers">
+      <div class="smartlink-card" style="width: 100%; background: #ffffff; background-image: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: relative; text-decoration: none !important; box-sizing: border-box; transition: transform 0.2s ease, border-color 0.2s ease;">
+        <span class="smartlink-badge" style="position: absolute; top: 8px; right: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; background: #f1f5f9; padding: 2px 7px; border-radius: 4px; text-decoration: none !important;">Partner Offer</span>
+        <div class="smartlink-icon" style="width: 42px; height: 42px; min-width: 42px; border-radius: 10px; background: #ffe4e6; color: #e11d48; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </div>
-      </a>
-    </aside>
+        <div class="smartlink-info" style="flex: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; text-decoration: none !important;">
+          <span class="smartlink-title" style="font-size: 14.5px; font-weight: 700; color: #0f172a; text-decoration: none !important; line-height: 1.35; display: block;">Premium Productivity Apps &amp; Cloud Tools</span>
+          <span class="smartlink-desc" style="font-size: 12.5px; color: #64748b; text-decoration: none !important; line-height: 1.35; display: block;">Special offers on document utilities, cloud backup, and PDF software.</span>
+        </div>
+        <span class="smartlink-action" style="background: #0f172a; color: #ffffff; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 8px; white-space: nowrap; flex-shrink: 0; text-decoration: none !important; display: inline-block;">Get Access &rarr;</span>
+      </div>
+    </a>
+  </aside>
 
 
     <!-- REAL READABLE FACTS SECTION -->
@@ -488,22 +492,21 @@
     </section>
 
     
-    <!-- Bottom Monetag SmartLink Sponsored Banner -->
-    <aside class="ad-container ad-banner-bottom" id="ad-bottom" aria-label="Sponsored Recommendation">
-      <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="smartlink-banner-link" title="Explore Recommended Partner Services">
-        <div class="smartlink-card">
-          <span class="smartlink-badge">Recommended</span>
-          <div class="smartlink-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <div class="smartlink-info">
-            <span class="smartlink-title">🚀 Fast File Archiving &amp; Document Solutions</span>
-            <span class="smartlink-desc">Explore verified partners for secure file compression, cloud tools &amp; storage.</span>
-          </div>
-          <span class="smartlink-action">Learn More &rarr;</span>
+  <aside class="ad-container ad-banner-bottom" id="ad-bottom" aria-label="Sponsored Recommendation" style="width: 100%; max-width: 760px; margin: 1.25rem auto; padding: 0 1rem; display: flex; justify-content: center; box-sizing: border-box;">
+    <a href="https://omg10.com/4/11833285" target="_blank" rel="noopener sponsored" class="smartlink-banner-link" style="display: block; width: 100%; text-decoration: none !important; color: inherit;" title="Explore Partner Offers">
+      <div class="smartlink-card" style="width: 100%; background: #ffffff; background-image: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: relative; text-decoration: none !important; box-sizing: border-box; transition: transform 0.2s ease, border-color 0.2s ease;">
+        <span class="smartlink-badge" style="position: absolute; top: 8px; right: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; background: #f1f5f9; padding: 2px 7px; border-radius: 4px; text-decoration: none !important;">Recommended</span>
+        <div class="smartlink-icon" style="width: 42px; height: 42px; min-width: 42px; border-radius: 10px; background: #ffe4e6; color: #e11d48; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
-      </a>
-    </aside>
+        <div class="smartlink-info" style="flex: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; text-decoration: none !important;">
+          <span class="smartlink-title" style="font-size: 14.5px; font-weight: 700; color: #0f172a; text-decoration: none !important; line-height: 1.35; display: block;">Fast File Archiving &amp; Document Solutions</span>
+          <span class="smartlink-desc" style="font-size: 12.5px; color: #64748b; text-decoration: none !important; line-height: 1.35; display: block;">Explore verified partners for secure file compression, cloud tools &amp; storage.</span>
+        </div>
+        <span class="smartlink-action" style="background: #0f172a; color: #ffffff; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 8px; white-space: nowrap; flex-shrink: 0; text-decoration: none !important; display: inline-block;">Learn More &rarr;</span>
+      </div>
+    </a>
+  </aside>
 
   </main>
 

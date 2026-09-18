@@ -11,3 +11,6 @@ New folder/
 *.log
 sample_*
 *.csv
+*.pdf
+*.doc*
+*.xlsx
