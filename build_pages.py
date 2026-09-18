@@ -1611,6 +1611,7 @@ for tool in tools_data:
 {schemas_json}
   </script>
 
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 
   <!-- ADSTERRA / MONETAG HEADER SCRIPT PLACEHOLDER -->
@@ -3497,6 +3498,7 @@ index_html = f"""<!DOCTYPE html>
 {index_schemas_json}
   </script>
 
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 
   <!-- ADSTERRA / MONETAG HEADER SCRIPT PLACEHOLDER -->
@@ -3724,6 +3726,69 @@ index_html = f"""<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(index_html)
 print("Generated index.html (PDFDock Main Portal)")
+
+# GENERATE 404.HTML FOR VERCEL DEPLOYMENT
+not_found_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | PDFDock</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  {make_navbar("404.html")}
+
+  <main class="main-wrapper" style="text-align: center; padding: 5rem 1.5rem 4rem; max-width: 860px; margin: 0 auto; min-height: 60vh;">
+    <div style="font-size: 5.5rem; font-weight: 900; color: #10b981; line-height: 1; margin-bottom: 1rem; letter-spacing: -2px;">404</div>
+    <h1 style="font-size: 2.25rem; font-weight: 800; color: var(--slate-900); margin-bottom: 1rem;">Page Not Found</h1>
+    <p style="font-size: 1.125rem; color: var(--slate-600); margin-bottom: 2.5rem; max-width: 580px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+      The page or PDF tool you are looking for does not exist, has been renamed, or has moved. Explore our popular tools below or return to the main portal.
+    </p>
+
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem;">
+      <a href="index.html" class="action-btn" style="background: var(--slate-900); color: #fff; text-decoration: none; padding: 0.85rem 1.75rem; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+        &larr; Back to Homepage
+      </a>
+      <a href="merge-pdf.html" class="action-btn" style="background: var(--primary); color: #fff; text-decoration: none; padding: 0.85rem 1.75rem; border-radius: 8px; font-weight: 600;">
+        Merge PDF
+      </a>
+      <a href="compress-pdf.html" class="action-btn" style="background: #059669; color: #fff; text-decoration: none; padding: 0.85rem 1.75rem; border-radius: 8px; font-weight: 600;">
+        Compress PDF
+      </a>
+      <a href="jpg-to-pdf.html" class="action-btn" style="background: #2563eb; color: #fff; text-decoration: none; padding: 0.85rem 1.75rem; border-radius: 8px; font-weight: 600;">
+        JPG to PDF
+      </a>
+    </div>
+
+    <div style="background: #fff; border: 1px solid var(--slate-200); border-radius: 12px; padding: 2rem; text-align: left; box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+      <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--slate-800);">Quick Links to Free Online PDF Tools</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.85rem;">
+        <a href="merge-pdf.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; Merge PDF</a>
+        <a href="split-pdf.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; Split PDF</a>
+        <a href="compress-pdf.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; Compress PDF</a>
+        <a href="jpg-to-pdf.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; JPG to PDF</a>
+        <a href="pdf-to-jpg.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; PDF to JPG</a>
+        <a href="pdf-to-word.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; PDF to Word</a>
+        <a href="word-to-pdf.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; Word to PDF</a>
+        <a href="excel-to-pdf.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; Excel to PDF</a>
+        <a href="sign-pdf.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; Sign PDF</a>
+        <a href="protect-pdf.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">&bull; Protect PDF</a>
+      </div>
+    </div>
+  </main>
+
+  {make_footer()}
+  <script src="app.js"></script>
+</body>
+</html>
+"""
+
+with open("404.html", "w", encoding="utf-8") as f:
+    f.write(not_found_html)
+print("Generated 404.html (Vercel Not Found Page)")
 
 # AUTOMATED SITEMAP.XML GENERATION FOR VERCEL HOSTING & SEARCH ENGINES
 sitemap_urls = [
