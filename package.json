@@ -1,0 +1,9 @@
+{
+  "name": "pdfdock",
+  "version": "1.0.0",
+  "description": "PDFDock - Fast, 100% In-Browser Client-Side PDF Tools",
+  "scripts": {
+    "build": "python build_pages.py",
+    "start": "python server.py 8080"
+  }
+}

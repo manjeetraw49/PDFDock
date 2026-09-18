@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary & System
+.DS_Store
+Thumbs.db
+New folder/
+.vercel/
+*.log
+sample_*
+*.csv

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 68" width="194" height="68">
+  <!-- Background transparent -->
+  
+  <!-- Icon Mark: Compact Document / Dock Symbol -->
+  <g transform="translate(8, 14)">
+    <rect x="4" y="2" width="28" height="40" rx="5" fill="#E2E8F0" />
+    <path d="M10 0h14a10 10 0 0 1 10 10v24a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#0F172A"/>
+    <path d="M14 13h10M14 19h8M14 25h5" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Merged Typography: PDFDock (Equal Size, Capital D) -->
+  <text x="56" y="47" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">
+    <tspan fill="#0F172A">PDF</tspan><tspan fill="#10B981">Dock</tspan>
+  </text>
+</svg>
