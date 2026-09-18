@@ -1526,7 +1526,7 @@ for tool in tools_data:
 
     # Prepare JSON-LD schemas and SEO/GEO blocks
     tool_keywords_str = ", ".join(tool.get("keywords", []))
-    canonical_url = f"https://pdfdock.vercel.app/{page_filename}"
+    canonical_url = f"https://pdfdock-ten.vercel.app/{page_filename}"
 
     # FAQ Schema & Markup
     faq_schema_list = []
@@ -1595,13 +1595,13 @@ for tool in tools_data:
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://pdfdock.vercel.app/"
+                    "item": "https://pdfdock-ten.vercel.app/"
                 },
                 {
                     "@type": "ListItem",
                     "position": 2,
                     "name": tool["category_label"],
-                    "item": f"https://pdfdock.vercel.app/index.html#{tool['category']}"
+                    "item": f"https://pdfdock-ten.vercel.app/index.html#{tool['category']}"
                 },
                 {
                     "@type": "ListItem",
@@ -1639,13 +1639,13 @@ for tool in tools_data:
   <meta property="og:url" content="{canonical_url}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PDFDock">
-  <meta property="og:image" content="https://pdfdock.vercel.app/gemini-svg.svg">
+  <meta property="og:image" content="https://pdfdock-ten.vercel.app/gemini-svg.svg">
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{tool["full_title"]} - Free Online Tool | PDFDock">
   <meta name="twitter:description" content="{tool["meta_desc"]}">
-  <meta name="twitter:image" content="https://pdfdock.vercel.app/gemini-svg.svg">
+  <meta name="twitter:image" content="https://pdfdock-ten.vercel.app/gemini-svg.svg">
 
   <!-- JSON-LD Structured Data for AI & Search Engines (GEO) -->
   <script type="application/ld+json">
@@ -3474,11 +3474,11 @@ index_schemas_json = json.dumps([
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "PDFDock",
-        "url": "https://pdfdock.vercel.app/",
+        "url": "https://pdfdock-ten.vercel.app/",
         "description": "PDFDock: Everything You Need, All in One Place. 100% free, private online PDF tools with no signup.",
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://pdfdock.vercel.app/?q={search_term_string}",
+            "target": "https://pdfdock-ten.vercel.app/?q={search_term_string}",
             "query-input": "required name=search_term_string"
         }
     },
@@ -3486,7 +3486,7 @@ index_schemas_json = json.dumps([
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "PDFDock Online PDF Suite",
-        "url": "https://pdfdock.vercel.app/",
+        "url": "https://pdfdock-ten.vercel.app/",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any Web Browser",
         "offers": {
@@ -3509,23 +3509,23 @@ index_html = f"""<!DOCTYPE html>
   <title>PDFDock - Everything You Need, All in One Place | Free Online PDF Tools</title>
   <meta name="description" content="PDFDock: Everything You Need, All in One Place. 100% free, private online PDF tools with no signup. Merge, split, compress, convert, edit, and sign PDFs in browser.">
   <meta name="keywords" content="online pdf tools, pdf editor free, convert pdf online, free pdf tools no signup, merge compress pdf, pdf converter, client side pdf tools">
-  <link rel="canonical" href="https://pdfdock.vercel.app/">
+  <link rel="canonical" href="https://pdfdock-ten.vercel.app/">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="google951b33abc70cfe21">
 
   <!-- OpenGraph / Social (GEO Metadata) -->
   <meta property="og:title" content="PDFDock - Everything You Need, All in One Place">
   <meta property="og:description" content="100% free, private online PDF tools with no signup. Merge, split, compress, convert, edit, and sign PDFs directly in browser.">
-  <meta property="og:url" content="https://pdfdock.vercel.app/">
+  <meta property="og:url" content="https://pdfdock-ten.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PDFDock">
-  <meta property="og:image" content="https://pdfdock.vercel.app/gemini-svg.svg">
+  <meta property="og:image" content="https://pdfdock-ten.vercel.app/gemini-svg.svg">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PDFDock - Everything You Need, All in One Place">
   <meta name="twitter:description" content="100% free, private online PDF tools with no signup. Merge, split, compress, convert, edit, and sign PDFs directly in browser.">
-  <meta name="twitter:image" content="https://pdfdock.vercel.app/gemini-svg.svg">
+  <meta name="twitter:image" content="https://pdfdock-ten.vercel.app/gemini-svg.svg">
 
   <!-- JSON-LD Structured Data for AI & Search Engines -->
   <script type="application/ld+json">
@@ -3817,7 +3817,7 @@ print("Generated 404.html (Vercel Not Found Page)")
 # AUTOMATED SITEMAP.XML GENERATION FOR VERCEL HOSTING & SEARCH ENGINES
 sitemap_urls = [
     """  <url>
-    <loc>https://pdfdock.vercel.app/</loc>
+    <loc>https://pdfdock-ten.vercel.app/</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -3829,7 +3829,7 @@ for t in tools_data:
     filename = t["file"]
     prio = "0.9" if filename in top_tools else "0.8"
     sitemap_urls.append(f"""  <url>
-    <loc>https://pdfdock.vercel.app/{filename}</loc>
+    <loc>https://pdfdock-ten.vercel.app/{filename}</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>{prio}</priority>
@@ -3848,7 +3848,7 @@ print(f"Generated sitemap.xml with all {len(sitemap_urls)} URLs")
 robots_txt = """User-agent: *
 Allow: /
 
-Sitemap: https://pdfdock.vercel.app/sitemap.xml
+Sitemap: https://pdfdock-ten.vercel.app/sitemap.xml
 """
 with open("robots.txt", "w", encoding="utf-8") as f:
     f.write(robots_txt)

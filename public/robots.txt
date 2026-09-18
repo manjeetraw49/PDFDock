@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pdfdock.vercel.app/sitemap.xml
+Sitemap: https://pdfdock-ten.vercel.app/sitemap.xml

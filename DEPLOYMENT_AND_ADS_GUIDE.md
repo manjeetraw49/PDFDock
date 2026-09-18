@@ -22,7 +22,7 @@ Vercel provides blazing-fast global Edge CDN hosting, automatic SSL (HTTPS), zer
    - **Build Command**: Automatically configured from `package.json`.
    - **Output Directory**: Leave empty / default.
 6. Click **"Deploy"**.
-7. In ~15 seconds, your site is live globally at **`https://pdfdock.vercel.app`**!
+7. In ~15 seconds, your site is live globally at **`https://pdfdock-ten.vercel.app`**!
 
 ### Method B: Deploy via Vercel CLI
 1. Open PowerShell in `c:\Users\HP\Downloads\PDF Website`.
