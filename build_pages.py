@@ -16,6 +16,7 @@ Features:
 """
 
 import os
+import shutil
 
 tools_data = [
     {
@@ -3831,4 +3832,26 @@ with open("robots.txt", "w", encoding="utf-8") as f:
 print("Generated robots.txt")
 
 print(f"ALL {len(tools_data) + 1} PAGES + SITEMAP.XML + ROBOTS.TXT GENERATED WITH SEO, GEO & VERCEL READINESS!")
+
+# SYNC ALL ASSETS TO public/ DIRECTORY FOR VERCEL DEPLOYMENT
+base_dir = os.path.dirname(os.path.abspath(__file__))
+public_dir = os.path.join(base_dir, "public")
+os.makedirs(public_dir, exist_ok=True)
+
+# Copy static assets to public/
+for item in os.listdir(base_dir):
+    if item.startswith("sample_") or item in ["public", ".git", ".vercel", "__pycache__", "New folder", "copy-public.js"]:
+        continue
+    src_path = os.path.join(base_dir, item)
+    dst_path = os.path.join(public_dir, item)
+    if os.path.isfile(src_path):
+        if item.endswith(('.html', '.css', '.js', '.svg', '.xml', '.txt', '.ico', '.png', '.jpg', '.webp')):
+            shutil.copy2(src_path, dst_path)
+    elif os.path.isdir(src_path) and item == "js":
+        if os.path.exists(dst_path):
+            shutil.rmtree(dst_path)
+        shutil.copytree(src_path, dst_path)
+
+print("Successfully synced all static files and js/ directory to public/ for Vercel deployment.")
+
 

@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Text & Watermark to PDF - Free Online PDF Tool | PDFDock</title>
+  <meta name="description" content="Add custom text, page numbers, or confidential watermarks to PDF files online for free. Live visual studio preview with customizable opacity, color, and placement.">
+  <meta name="keywords" content="add text to pdf, edit pdf text, write on pdf, add watermark to pdf, type on pdf online, add text to pdf free, insert text into pdf">
+  <link rel="canonical" href="https://pdfdock.vercel.app/add-text.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- OpenGraph / Social Metadata (GEO & Rich Snippets) -->
+  <meta property="og:title" content="Add Text & Watermark to PDF - Free Online Tool | PDFDock">
+  <meta property="og:description" content="Add custom text, page numbers, or confidential watermarks to PDF files online for free. Live visual studio preview with customizable opacity, color, and placement.">
+  <meta property="og:url" content="https://pdfdock.vercel.app/add-text.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PDFDock">
+  <meta property="og:image" content="https://pdfdock.vercel.app/gemini-svg.svg">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Add Text & Watermark to PDF - Free Online Tool | PDFDock">
+  <meta name="twitter:description" content="Add custom text, page numbers, or confidential watermarks to PDF files online for free. Live visual studio preview with customizable opacity, color, and placement.">
+  <meta name="twitter:image" content="https://pdfdock.vercel.app/gemini-svg.svg">
+
+  <!-- JSON-LD Structured Data for AI & Search Engines (GEO) -->
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PDFDock Add Text",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Add custom text, page numbers, or confidential watermarks to PDF files online for free. Live visual studio preview with customizable opacity, color, and placement.",
+    "featureList": "100% In-Browser Execution, Complete Privacy, No Server Uploads, Mobile Friendly"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Add Text Online with PDFDock",
+    "description": "This tool is a free PDF text annotator designed for freelancers, contract signers, and business owners to stamp custom text, headers, or watermarks onto PDF pages directly.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Upload PDF",
+        "text": "Drop your PDF file into the studio to activate the text and watermark editor."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Configure Text & Style",
+        "text": "Choose a preset or type custom text, select position, color, and transparency with live preview."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Preview & Save",
+        "text": "Tap 'Apply Watermark / Text', inspect the final document, and download."
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I stamp diagonal watermarks like 'CONFIDENTIAL' or 'DRAFT'?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Use one of our quick presets or type your own text, adjust the 45-degree angle, opacity, font size, and color with live visual preview."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I add dynamic page numbers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, enter 'Page {n} of {total}' into the text field to automatically stamp accurate page numbers across all pages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I place text underneath or on top of document content?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can choose 'Overlay' (stamps over content) or 'Underlay' (watermark sits beneath document text)."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pdfdock.vercel.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Edit & Security",
+        "item": "https://pdfdock.vercel.app/index.html#edit"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Add Text",
+        "item": "https://pdfdock.vercel.app/add-text.html"
+      }
+    ]
+  }
+]
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ADSTERRA / MONETAG HEADER SCRIPT PLACEHOLDER -->
+  <!-- START HEADER AD CODE -->
+  <!-- Example: Adsterra Popunder or Monetag In-Page Push -->
+  <!-- END HEADER AD CODE -->
+</head>
+<body>
+  
+  <nav class="site-nav" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" title="PDFDock - Everything You Need, All in One Place">
+        <img src="gemini-svg.svg" alt="PDFDock" class="brand-logo" width="114" height="40">
+      </a>
+      <div class="nav-tools-menu">
+        <div class="nav-dropdown-wrap">
+          <button type="button" class="nav-dropdown-btn" id="menu-toggle-btn" aria-expanded="false" aria-label="Toggle Tools Menu">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>Tools</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tools-menu-drawer" id="tools-drawer">
+            <div class="mega-menu-header">
+              <span class="mega-header-title">All 18 PDFDock Tools</span>
+              <a href="index.html" class="mega-all-link">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -1px; margin-right: 3px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                All Tools Directory &rarr;
+              </a>
+            </div>
+            <div class="mega-menu-grid">
+              
+          <div class="mega-col">
+            <div class="mega-col-title">Organize PDF</div>
+            <div class="mega-col-links">
+              <a href="merge-pdf.html" class="mega-tool-link">Merge PDF</a><a href="split-pdf.html" class="mega-tool-link">Split PDF</a><a href="compress-pdf.html" class="mega-tool-link">Compress PDF</a><a href="delete-pdf-pages.html" class="mega-tool-link">Delete PDF Pages</a><a href="reorder-pdf-pages.html" class="mega-tool-link">Reorder PDF Pages</a>
+            </div>
+          </div>
+        
+          <div class="mega-col">
+            <div class="mega-col-title">Convert to PDF</div>
+            <div class="mega-col-links">
+              <a href="jpg-to-pdf.html" class="mega-tool-link">JPG → PDF</a><a href="png-to-pdf.html" class="mega-tool-link">PNG → PDF</a><a href="word-to-pdf.html" class="mega-tool-link">Word → PDF</a><a href="excel-to-pdf.html" class="mega-tool-link">Excel → PDF</a><a href="powerpoint-to-pdf.html" class="mega-tool-link">PowerPoint → PDF</a>
+            </div>
+          </div>
+        
+          <div class="mega-col">
+            <div class="mega-col-title">Convert from PDF</div>
+            <div class="mega-col-links">
+              <a href="pdf-to-jpg.html" class="mega-tool-link">PDF → JPG</a><a href="pdf-to-png.html" class="mega-tool-link">PDF → PNG</a><a href="pdf-to-text.html" class="mega-tool-link">PDF → Text</a><a href="pdf-to-word.html" class="mega-tool-link">PDF → Word</a><a href="pdf-to-excel.html" class="mega-tool-link">PDF → Excel</a>
+            </div>
+          </div>
+        
+          <div class="mega-col">
+            <div class="mega-col-title">Edit & Security</div>
+            <div class="mega-col-links">
+              <a href="add-text.html" class="mega-tool-link active">Add Text</a><a href="sign-pdf.html" class="mega-tool-link">Sign PDF</a><a href="protect-pdf.html" class="mega-tool-link">Protect PDF</a>
+            </div>
+          </div>
+        
+            </div>
+          </div>
+        </div>
+        <a href="jpg-to-pdf.html" class="nav-link">JPG to PDF</a>
+        <a href="pdf-to-jpg.html" class="nav-link">PDF to JPG</a>
+        <a href="compress-pdf.html" class="nav-link">Compress PDF</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Top Banner Ad (Adsterra 728x90 / Monetag 320x50) -->
+  <aside class="ad-container ad-banner-top" id="ad-top" aria-label="Advertisement">
+    <div class="ad-placeholder">
+      <span class="ad-badge">Advertisement</span>
+      <p class="ad-note">Adsterra / Monetag Top Banner (728x90 or 320x50) Slot</p>
+    </div>
+  </aside>
+
+  <main class="main-wrapper tool-page-wrapper">
+    <header class="hero-header">
+      <h1 class="hero-title">Add Text & Watermark to PDF</h1>
+      <!-- REQUIRED PLAIN SENTENCE: What it is, who it is for, and what job it does -->
+      <p class="hero-statement">
+        This tool is a free PDF text annotator designed for freelancers, contract signers, and business owners to stamp custom text, headers, or watermarks onto PDF pages directly.
+      </p>
+    </header>
+
+    <!-- THE ONE TOOL AREA -->
+    <section class="tool-section" id="tool-container">
+      
+      <!-- THE ONE BOX: DROPZONE -->
+      <div class="upload-box" id="drop-zone" tabindex="0" role="button" aria-label="Upload files for Add Text">
+        <input type="file" id="file-input" accept=".pdf,application/pdf"  aria-hidden="true">
+        
+        <div class="upload-content" id="upload-content">
+          <div class="upload-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <p class="upload-title">Drop your PDF file here</p>
+          <p class="upload-subtitle">stamp text, footer, or confidential watermarks</p>
+          <span class="upload-tag">100% Free &bull; No Signup &bull; Fast In-Browser</span>
+        </div>
+
+        <!-- Processing State -->
+        <div class="processing-state" id="processing-state" style="display: none;">
+          <div class="spinner" aria-hidden="true"></div>
+          <p class="processing-text" id="processing-msg">Loading and rendering document pages...</p>
+        </div>
+      </div>
+
+      
+      <!-- WATERMARK & TEXT STUDIO WORKSPACE -->
+      <div class="watermark-studio-card" id="options-card" style="display: none;">
+        <!-- File Badge Header -->
+        <div class="watermark-file-badge">
+          <div style="display: flex; align-items: center; gap: 0.5rem; overflow: hidden;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; color:var(--primary);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span id="wm-file-name" style="font-weight: 600; color: var(--slate-900); white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">Document.pdf</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;">
+            <span id="wm-file-size" style="font-weight: 700; color: var(--slate-600);">-- KB</span>
+            <button type="button" class="btn-ctrl" id="btn-change-wm-file" style="font-size: 0.75rem; padding: 0.25rem 0.55rem;">Change File</button>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 0.25rem;">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.25rem;">Watermark &amp; Text Studio</h3>
+          <p style="font-size: 0.85rem; color: var(--slate-500);">Stamp diagonal security watermarks, headers, footers, or page numbers with live visual preview</p>
+        </div>
+
+        <!-- Quick Preset Chips -->
+        <div class="wm-presets-wrap">
+          <span style="font-size: 0.75rem; font-weight: 700; color: var(--slate-500); text-transform: uppercase;">Quick Presets:</span>
+          <div class="wm-presets-list">
+            <button type="button" class="wm-preset-btn" data-text="CONFIDENTIAL" data-color="#dc2626" data-pos="diagonal-45" data-opacity="0.25" data-size="48">🔴 Confidential</button>
+            <button type="button" class="wm-preset-btn" data-text="DRAFT" data-color="#ea580c" data-pos="diagonal-45" data-opacity="0.28" data-size="52">🟠 Draft</button>
+            <button type="button" class="wm-preset-btn" data-text="APPROVED" data-color="#16a34a" data-pos="center" data-opacity="0.35" data-size="44">🟢 Approved</button>
+            <button type="button" class="wm-preset-btn" data-text="DO NOT COPY" data-color="#2563eb" data-pos="diagonal-45" data-opacity="0.25" data-size="46">🔵 Do Not Copy</button>
+            <button type="button" class="wm-preset-btn" data-text="SAMPLE" data-color="#475569" data-pos="diagonal-45" data-opacity="0.22" data-size="56">⚪ Sample</button>
+            <button type="button" class="wm-preset-btn" data-text="TOP SECRET" data-color="#b91c1c" data-pos="diagonal-45" data-opacity="0.30" data-size="48">🔒 Top Secret</button>
+            <button type="button" class="wm-preset-btn" data-text="Page {n} of {total}" data-color="#334155" data-pos="bottom-center" data-opacity="0.85" data-size="12">📄 Page Numbers</button>
+          </div>
+        </div>
+
+        <!-- Two-Column Studio Layout: Settings + Live Preview -->
+        <div class="wm-studio-grid">
+          <!-- Left Column: Controls -->
+          <div class="wm-controls-col">
+            <!-- Text Content -->
+            <div class="option-group">
+              <label class="option-label" for="stamp-text">Watermark / Text Content:</label>
+              <input type="text" id="stamp-text" class="option-input" value="CONFIDENTIAL" placeholder="e.g. Confidential, Approved, Page {n} of {total}">
+              <span style="font-size: 0.72rem; color: var(--slate-400);">Tip: Use <code>{n}</code> for page number and <code>{total}</code> for total pages</span>
+            </div>
+
+            <!-- Placement / Position -->
+            <div class="option-group">
+              <label class="option-label" for="stamp-pos">Placement &amp; Position:</label>
+              <select id="stamp-pos" class="option-input">
+                <option value="diagonal-45" selected>📐 Diagonal Center (+45°) &mdash; Security Watermark</option>
+                <option value="diagonal-minus-45">📐 Diagonal Center (-45°)</option>
+                <option value="center">⬛ Center Horizontal (0°)</option>
+                <option value="top-center">⬆️ Top Center (Header)</option>
+                <option value="top-left">↖️ Top Left</option>
+                <option value="top-right">↗️ Top Right</option>
+                <option value="bottom-center">⬇️ Bottom Center (Footer / Page Number)</option>
+                <option value="bottom-left">↙️ Bottom Left</option>
+                <option value="bottom-right">↘️ Bottom Right</option>
+              </select>
+            </div>
+
+            <!-- Font Family & Size -->
+            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 0.75rem;">
+              <div class="option-group">
+                <label class="option-label" for="stamp-font">Font Style:</label>
+                <select id="stamp-font" class="option-input">
+                  <option value="HelveticaBold" selected>Helvetica Bold</option>
+                  <option value="Helvetica">Helvetica Normal</option>
+                  <option value="TimesRomanBold">Times Bold (Serif)</option>
+                  <option value="TimesRoman">Times Normal (Serif)</option>
+                  <option value="CourierBold">Courier Bold (Mono)</option>
+                  <option value="Courier">Courier Normal (Mono)</option>
+                </select>
+              </div>
+              <div class="option-group">
+                <div style="display: flex; justify-content: space-between;">
+                  <label class="option-label" for="stamp-size">Size (pt):</label>
+                  <span id="stamp-size-val" style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">48 pt</span>
+                </div>
+                <input type="range" id="stamp-size" class="compress-range-input" min="10" max="90" step="2" value="48">
+              </div>
+            </div>
+
+            <!-- Color & Opacity -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div class="option-group">
+                <label class="option-label" for="stamp-color">Color:</label>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <input type="color" id="stamp-color" value="#dc2626" style="width: 42px; height: 38px; border: 1px solid var(--slate-300); border-radius: 4px; padding: 2px; cursor: pointer;">
+                  <span id="stamp-color-hex" style="font-size: 0.85rem; font-family: monospace; color: var(--slate-700);">#DC2626</span>
+                </div>
+              </div>
+              <div class="option-group">
+                <div style="display: flex; justify-content: space-between;">
+                  <label class="option-label" for="stamp-opacity">Opacity / Transparency:</label>
+                  <span id="stamp-opacity-val" style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">25%</span>
+                </div>
+                <input type="range" id="stamp-opacity" class="compress-range-input" min="5" max="100" step="5" value="25">
+              </div>
+            </div>
+
+            <!-- Rotation Angle Fine-Tuning -->
+            <div class="option-group">
+              <div style="display: flex; justify-content: space-between;">
+                <label class="option-label" for="stamp-angle">Rotation Angle:</label>
+                <span id="stamp-angle-val" style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">+45°</span>
+              </div>
+              <input type="range" id="stamp-angle" class="compress-range-input" min="-90" max="90" step="5" value="45">
+            </div>
+
+            <!-- Target Pages -->
+            <div class="option-group">
+              <label class="option-label" for="stamp-pages">Apply to Pages:</label>
+              <select id="stamp-pages" class="option-input">
+                <option value="all" selected>All Pages in Document</option>
+                <option value="first">First Page Only</option>
+                <option value="not-first">All Pages Except First Page</option>
+                <option value="last">Last Page Only</option>
+                <option value="custom">Custom Page Range (e.g. 1, 3-5)</option>
+              </select>
+              <input type="text" id="stamp-custom-range" class="option-input" placeholder="e.g. 1, 3-5" style="display: none; margin-top: 0.35rem;">
+            </div>
+
+            <!-- Layer Mode -->
+            <div class="option-group">
+              <label class="option-label" for="stamp-layer">Layering Mode:</label>
+              <select id="stamp-layer" class="option-input">
+                <option value="over" selected>Overlay (Stamps over content with transparency)</option>
+                <option value="under">Underlay (Watermark beneath document text)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Right Column: Live Visual Page Mockup Preview -->
+          <div class="wm-preview-col">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--slate-700);">Interactive Page Simulation</span>
+              <span class="upload-tag" style="font-size: 0.7rem; padding: 0.15rem 0.5rem;">Live Dynamic Preview</span>
+            </div>
+            <div class="wm-preview-sheet" id="wm-preview-sheet">
+              <!-- Faux content lines simulating document -->
+              <div class="wm-preview-lines">
+                <div class="wm-line line-title"></div>
+                <div class="wm-line line-full"></div>
+                <div class="wm-line line-full"></div>
+                <div class="wm-line line-3-4"></div>
+                <div class="wm-line line-full" style="margin-top: 0.75rem;"></div>
+                <div class="wm-line line-full"></div>
+                <div class="wm-line line-half"></div>
+                <div class="wm-line line-full" style="margin-top: 0.75rem;"></div>
+                <div class="wm-line line-3-4"></div>
+              </div>
+              <!-- Live Watermark Text Element -->
+              <div id="wm-live-stamp" class="wm-live-stamp">CONFIDENTIAL</div>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--slate-400); text-align: center; margin-top: 0.5rem;">
+              Mockup updates in real-time as you tweak styling &amp; position
+            </p>
+          </div>
+        </div>
+
+        <button type="button" class="action-trigger-btn" id="btn-apply-text" style="background: var(--primary); margin-top: 0.5rem;">
+          ⚡ Apply Watermark / Text &amp; Preview Final Document
+        </button>
+      </div>
+        
+
+      <!-- PRE-EXPORT COMPLETE FINAL PDF PREVIEW -->
+      <div class="final-preview-container" id="final-preview-container" style="display: none;">
+        <div class="final-preview-header">
+          <div class="result-check" aria-hidden="true">✓</div>
+          <h2 class="final-preview-title">Complete Final PDF Preview</h2>
+          <p class="final-preview-sub" id="preview-summary">Scroll and review your final document below before downloading.</p>
+        </div>
+
+        <div class="preview-frame-wrap">
+          <iframe id="pdf-preview-frame" class="pdf-preview-iframe" title="Complete Final PDF Preview"></iframe>
+          <div id="preview-mobile-scroll" class="preview-mobile-scroll"></div>
+        </div>
+
+        <div class="final-actions-bar">
+          <button type="button" class="btn-primary" id="download-final-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Final PDF
+          </button>
+          <button type="button" class="btn-secondary" id="rearrange-btn">
+            &larr; Re-arrange / Edit Pages
+          </button>
+        </div>
+      </div>
+
+      <!-- STANDARD RESULT BOX (Used for Non-PDF outputs like JPG/PNG/Text/Word/Excel) -->
+      <div class="result-box" id="result-box" style="display: none;">
+        <div class="result-check" aria-hidden="true">✓</div>
+        <h2 class="result-title">Your File is Ready!</h2>
+        <p class="result-summary" id="result-summary">Processed successfully in your browser.</p>
+
+        <div class="result-actions">
+          <button type="button" class="btn-primary" id="download-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Result
+          </button>
+          <button type="button" class="btn-secondary" id="back-to-pages-btn" style="display: none;">
+            &larr; Choose Other Pages
+          </button>
+          <button type="button" class="btn-secondary" id="reset-btn">
+            Process Another File
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Mid-Page Ad Slot (300x250 Rectangle) -->
+    <aside class="ad-container ad-banner-mid" id="ad-mid" aria-label="Advertisement">
+      <div class="ad-placeholder">
+        <span class="ad-badge">Advertisement</span>
+        <p class="ad-note">Adsterra / Monetag Banner or Rectangle (300x250) Slot</p>
+      </div>
+    </aside>
+
+    <!-- REAL READABLE FACTS SECTION -->
+    <section class="facts-section" aria-labelledby="facts-title">
+      <h2 class="facts-heading" id="facts-title">Key Facts &amp; Technical Specifications</h2>
+      <div class="facts-grid">
+        <article class="fact-card">
+          <h3 class="fact-title">100% In-Browser Execution</h3>
+          <p class="fact-description">All page rendering and modifications take place strictly inside your browser memory. Documents are never uploaded to remote servers.</p>
+        </article>
+        <article class="fact-card">
+          <h3 class="fact-title">Full Visual Inspection</h3>
+          <p class="fact-description">See every page thumbnail in order before making changes, and inspect the complete final document before saving.</p>
+        </article>
+        <article class="fact-card">
+          <h3 class="fact-title">Sub-Second Processing</h3>
+          <p class="fact-description">Operates locally at device speed. No waiting in cloud queues or slow upload timeouts.</p>
+        </article>
+        <article class="fact-card">
+          <h3 class="fact-title">Mobile Phone &amp; Touch Optimized</h3>
+          <p class="fact-description">Engineered with dedicated touch arrow controls for effortless page shifting on iPhone and Android screens.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SPECIFICATIONS TABLE / GRID (GEO GROUNDING) -->
+    <section class="specs-section" aria-labelledby="specs-title">
+      <h2 class="facts-heading" id="specs-title">Add Text Technical Specifications</h2>
+      <div class="specs-grid">
+        <div class="specs-card">
+          <span class="specs-label">Supported Input</span>
+          <span class="specs-val">PDF document (.pdf)</span>
+          <span class="specs-note">Native document formats</span>
+        </div>
+        <div class="specs-card">
+          <span class="specs-label">Generated Output</span>
+          <span class="specs-val">Annotated / Watermarked PDF (.pdf)</span>
+          <span class="specs-note">Standard universal format</span>
+        </div>
+        <div class="specs-card">
+          <span class="specs-label">Privacy &amp; Security</span>
+          <span class="specs-val">100% In-Browser (0 Server Uploads)</span>
+          <span class="specs-note">Zero server uploads</span>
+        </div>
+        <div class="specs-card">
+          <span class="specs-label">Processing Speed</span>
+          <span class="specs-val">Real-Time Visual Studio Preview</span>
+          <span class="specs-note">Hardware-accelerated CPU</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-STEP HOW TO USE GUIDE -->
+    <section class="guide-section" aria-labelledby="guide-title">
+      <h2 class="facts-heading" id="guide-title">How to Use Add Text</h2>
+      <ol class="steps-list">
+        <li class="step-item"><strong>Step 1: Upload PDF</strong> &mdash; Drop your PDF file into the studio to activate the text and watermark editor.</li>
+        <li class="step-item"><strong>Step 2: Configure Text & Style</strong> &mdash; Choose a preset or type custom text, select position, color, and transparency with live preview.</li>
+        <li class="step-item"><strong>Step 3: Preview & Save</strong> &mdash; Tap 'Apply Watermark / Text', inspect the final document, and download.</li>
+      </ol>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (GEO & SEARCH SNIPPETS) -->
+    <section class="faq-section" aria-labelledby="faq-title">
+      <h2 class="facts-heading" id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        
+        <article class="faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="faq-question" itemprop="name">Can I stamp diagonal watermarks like 'CONFIDENTIAL' or 'DRAFT'?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="faq-answer" itemprop="text">Yes! Use one of our quick presets or type your own text, adjust the 45-degree angle, opacity, font size, and color with live visual preview.</p>
+          </div>
+        </article>
+        
+        <article class="faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="faq-question" itemprop="name">Can I add dynamic page numbers?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="faq-answer" itemprop="text">Yes, enter 'Page {n} of {total}' into the text field to automatically stamp accurate page numbers across all pages.</p>
+          </div>
+        </article>
+        
+        <article class="faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="faq-question" itemprop="name">Can I place text underneath or on top of document content?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p class="faq-answer" itemprop="text">Yes, you can choose 'Overlay' (stamps over content) or 'Underlay' (watermark sits beneath document text).</p>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+
+    <!-- Bottom Banner Ad Slot -->
+    <aside class="ad-container ad-banner-bottom" id="ad-bottom" aria-label="Advertisement">
+      <div class="ad-placeholder">
+        <span class="ad-badge">Advertisement</span>
+        <p class="ad-note">Adsterra / Monetag Bottom Banner (728x90) Slot</p>
+      </div>
+    </aside>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-link" title="PDFDock - Everything You Need, All in One Place">
+            <img src="gemini-svg.svg" alt="PDFDock Logo" class="footer-logo" width="145" height="51">
+          </a>
+          <p class="footer-tagline">Everything You Need, All in One Place.</p>
+        </div>
+        <div class="footer-nav-grid">
+          
+        <div class="footer-col">
+          <h4 class="footer-col-title">Organize PDF</h4>
+          <div class="footer-links-list">
+            <a href="merge-pdf.html" class="footer-tool-link">Merge PDF</a><a href="split-pdf.html" class="footer-tool-link">Split PDF</a><a href="compress-pdf.html" class="footer-tool-link">Compress PDF</a><a href="delete-pdf-pages.html" class="footer-tool-link">Delete PDF Pages</a><a href="reorder-pdf-pages.html" class="footer-tool-link">Reorder PDF Pages</a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-col-title">Convert to PDF</h4>
+          <div class="footer-links-list">
+            <a href="jpg-to-pdf.html" class="footer-tool-link">JPG → PDF</a><a href="png-to-pdf.html" class="footer-tool-link">PNG → PDF</a><a href="word-to-pdf.html" class="footer-tool-link">Word → PDF</a><a href="excel-to-pdf.html" class="footer-tool-link">Excel → PDF</a><a href="powerpoint-to-pdf.html" class="footer-tool-link">PowerPoint → PDF</a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-col-title">Convert from PDF</h4>
+          <div class="footer-links-list">
+            <a href="pdf-to-jpg.html" class="footer-tool-link">PDF → JPG</a><a href="pdf-to-png.html" class="footer-tool-link">PDF → PNG</a><a href="pdf-to-text.html" class="footer-tool-link">PDF → Text</a><a href="pdf-to-word.html" class="footer-tool-link">PDF → Word</a><a href="pdf-to-excel.html" class="footer-tool-link">PDF → Excel</a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-col-title">Edit & Security</h4>
+          <div class="footer-links-list">
+            <a href="add-text.html" class="footer-tool-link">Add Text</a><a href="sign-pdf.html" class="footer-tool-link">Sign PDF</a><a href="protect-pdf.html" class="footer-tool-link">Protect PDF</a>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">&copy; 2026 PDFDock &bull; All rights reserved.</p>
+        <p class="footer-author">Developed By Manjeet Raw</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Core Libraries -->
+  <script src="js/jspdf.umd.min.js"></script>
+  <script src="js/pdf-lib.min.js"></script>
+  <script src="js/pdf-encrypt.umd.js"></script>
+  <script src="js/pdf.min.js"></script>
+  <script src="js/jszip.min.js"></script>
+  <script src="js/docx-preview.min.js"></script>
+  <script src="js/xlsx.full.min.js"></script>
+  <script src="js/mammoth.browser.min.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+  <script src="js/tools-engine.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Menu Drawer Hover & Click Toggle
+      const dropdownWrap = document.querySelector('.nav-dropdown-wrap');
+      const drawer = document.getElementById('tools-drawer');
+      const menuBtn = document.getElementById('menu-toggle-btn');
+      if (dropdownWrap && drawer) {
+        let hideTimer = null;
+        const openMenu = () => {
+          clearTimeout(hideTimer);
+          drawer.classList.add('show');
+          if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+        };
+        const closeMenu = () => {
+          hideTimer = setTimeout(() => {
+            drawer.classList.remove('show');
+            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+          }, 220);
+        };
+
+        dropdownWrap.addEventListener('mouseenter', openMenu);
+        dropdownWrap.addEventListener('mouseleave', closeMenu);
+        drawer.addEventListener('mouseenter', openMenu);
+        drawer.addEventListener('mouseleave', closeMenu);
+
+        if (menuBtn) {
+          menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = drawer.classList.toggle('show');
+            menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+
+        drawer.addEventListener('click', (e) => {
+          if (e.target.tagName !== 'A') e.stopPropagation();
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!dropdownWrap.contains(e.target)) {
+            drawer.classList.remove('show');
+            if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      const dropZone = document.getElementById('drop-zone');
+      const fileInput = document.getElementById('file-input');
+      const uploadContent = document.getElementById('upload-content');
+      const processingState = document.getElementById('processing-state');
+      const processingMsg = document.getElementById('processing-msg');
+      const finalPreviewContainer = document.getElementById('final-preview-container');
+      const pdfPreviewFrame = document.getElementById('pdf-preview-frame');
+      const previewMobileScroll = document.getElementById('preview-mobile-scroll');
+      const previewSummary = document.getElementById('preview-summary');
+      const downloadFinalBtn = document.getElementById('download-final-btn');
+      const rearrangeBtn = document.getElementById('rearrange-btn');
+
+      const resultBox = document.getElementById('result-box');
+      const resultSummary = document.getElementById('result-summary');
+      const downloadBtn = document.getElementById('download-btn');
+      const resetBtn = document.getElementById('reset-btn');
+
+      const pagesOrganizer = document.getElementById('pages-organizer');
+      const pagesGrid = document.getElementById('pages-grid');
+      const mergeFilesList = document.getElementById('merge-files-list');
+      const optionsCard = document.getElementById('options-card');
+
+      const btnSelectAll = document.getElementById('btn-select-all');
+      const btnDeselectAll = document.getElementById('btn-deselect-all');
+      const btnDownloadSelected = document.getElementById('btn-download-selected');
+      const backToPagesBtn = document.getElementById('back-to-pages-btn');
+      const imgSelectHint = document.getElementById('img-select-hint') || document.getElementById('jpg-select-hint') || document.getElementById('png-select-hint');
+
+      let selectedFiles = [];
+      let currentPdfFile = null;
+      let renderedPages = []; // array of { pageNum, originalIndex, canvas }
+      let selectedPageNumbers = new Set();
+      let finalPdfBlob = null;
+      let finalPdfUrl = null;
+      let finalFilename = 'pdfdock-output.pdf';
+
+      // Drag & Drop for upload zone
+      ['dragenter', 'dragover'].forEach(n => {
+        dropZone.addEventListener(n, (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
+      });
+      ['dragleave', 'dragend', 'drop'].forEach(n => {
+        dropZone.addEventListener(n, (e) => { e.preventDefault(); dropZone.classList.remove('dragover'); });
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        if (e.dataTransfer && e.dataTransfer.files.length) handleFiles(e.dataTransfer.files);
+      });
+      fileInput.addEventListener('change', (e) => {
+        if (e.target.files.length) handleFiles(e.target.files);
+      });
+      dropZone.addEventListener('click', () => {
+        fileInput.click();
+      });
+      dropZone.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
+      });
+
+      // Handle Files
+      async function handleFiles(files) {
+        selectedFiles = Array.from(files);
+        if (!selectedFiles.length) return;
+
+        const toolMode = "add_text";
+
+        if (toolMode === "pdf_to_images") {
+          currentPdfFile = selectedFiles[0];
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = "Rendering PDF pages for preview...";
+          processingState.style.display = 'flex';
+
+          try {
+            renderedPages = await window.PDFDock.renderPdfPagesToCanvases(currentPdfFile, 0.5);
+            buildImageSelectionGrid();
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+            pagesOrganizer.style.display = 'block';
+          } catch (err) {
+            alert('Error rendering PDF: ' + err.message);
+            uploadContent.style.display = 'flex';
+            processingState.style.display = 'none';
+          }
+        } else if (toolMode === "reorder" || toolMode === "delete" || toolMode === "split") {
+          currentPdfFile = selectedFiles[0];
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = "Rendering all PDF pages in order...";
+          processingState.style.display = 'flex';
+
+          try {
+            renderedPages = await window.PDFDock.renderPdfPagesToCanvases(currentPdfFile, 0.45);
+            buildPagesGrid(toolMode);
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+            pagesOrganizer.style.display = 'block';
+          } catch (err) {
+            alert('Error rendering PDF: ' + err.message);
+            uploadContent.style.display = 'flex';
+            processingState.style.display = 'none';
+          }
+        } else if (toolMode === "merge") {
+          dropZone.style.display = 'none';
+          pagesOrganizer.style.display = 'block';
+          buildMergeFilesList();
+        } else if (toolMode === "compress") {
+          currentPdfFile = selectedFiles[0];
+          dropZone.style.display = 'none';
+          optionsCard.style.display = 'flex';
+          initCompressOptions();
+        } else if (toolMode === "add_text") {
+          currentPdfFile = selectedFiles[0];
+          dropZone.style.display = 'none';
+          optionsCard.style.display = 'flex';
+          initWatermarkStudio();
+        } else if (toolMode === "protect") {
+          currentPdfFile = selectedFiles[0];
+          dropZone.style.display = 'none';
+          optionsCard.style.display = 'flex';
+          initProtectStudio();
+        } else if (toolMode === "add_image") {
+          let pdfF = null, imgF = null;
+          selectedFiles.forEach(f => {
+            if (f.name.toLowerCase().endsWith('.pdf') || f.type.includes('pdf')) pdfF = f;
+            else if (f.type.startsWith('image/')) imgF = f;
+          });
+          if (!pdfF && selectedFiles[0] && (selectedFiles[0].type.includes('pdf') || selectedFiles[0].name.toLowerCase().endsWith('.pdf'))) {
+            pdfF = selectedFiles[0];
+          }
+          if (!pdfF) {
+            alert('Please select a PDF file to sign or stamp.');
+            return;
+          }
+          currentPdfFile = pdfF;
+          dropZone.style.display = 'none';
+          optionsCard.style.display = 'flex';
+          initSignaturePad();
+          if (imgF) {
+            switchSigTab('upload');
+            handleStampImageUpload(imgF);
+          }
+        } else {
+          // Direct execution tools (Compress, JPG->PDF, Word->PDF, etc.)
+          executeDirectTool();
+        }
+      }
+
+      // Build Pages Selection Grid for PDF -> Images (JPG / PNG)
+      function buildImageSelectionGrid() {
+        if (!pagesGrid) return;
+        pagesGrid.innerHTML = '';
+        selectedPageNumbers = new Set();
+        const imgExt = "add-text".includes('png') ? 'PNG' : 'JPG';
+
+        renderedPages.forEach((pageObj, idx) => {
+          const pageNum = idx + 1;
+          selectedPageNumbers.add(pageNum);
+
+          const card = document.createElement('div');
+          card.className = 'page-card is-selected';
+          card.dataset.pageNum = pageNum;
+          card.style.cursor = 'pointer';
+
+          const header = document.createElement('div');
+          header.className = 'page-card-header';
+          header.innerHTML = `
+            <span class="page-card-checkbox">✓</span>
+            <span class="page-badge">Page ${pageNum}</span>
+          `;
+          card.appendChild(header);
+
+          const canvasWrap = document.createElement('div');
+          canvasWrap.className = 'card-canvas-wrap';
+
+          if (pageObj.dataUrl) {
+            const img = document.createElement('img');
+            img.src = pageObj.dataUrl;
+            img.alt = `Page ${pageNum} preview`;
+            img.className = 'page-card-preview-img';
+            canvasWrap.appendChild(img);
+          } else if (pageObj.canvas) {
+            const copyCanvas = document.createElement('canvas');
+            copyCanvas.width = pageObj.canvas.width;
+            copyCanvas.height = pageObj.canvas.height;
+            const copyCtx = copyCanvas.getContext('2d');
+            copyCtx.drawImage(pageObj.canvas, 0, 0);
+            copyCanvas.className = 'page-card-preview-img';
+            canvasWrap.appendChild(copyCanvas);
+          }
+          card.appendChild(canvasWrap);
+
+          const controls = document.createElement('div');
+          controls.className = 'page-card-controls';
+          const btnDl = document.createElement('button');
+          btnDl.type = 'button';
+          btnDl.className = 'btn-ctrl btn-download-page';
+          btnDl.innerHTML = `⬇ Download Page ${pageNum}`;
+          btnDl.title = `Download Page ${pageNum} as ${imgExt}`;
+          btnDl.onclick = (e) => {
+            e.stopPropagation();
+            downloadSingleImage(pageNum);
+          };
+          controls.appendChild(btnDl);
+          card.appendChild(controls);
+
+          // Clicking card toggles selection
+          card.onclick = () => {
+            if (selectedPageNumbers.has(pageNum)) {
+              selectedPageNumbers.delete(pageNum);
+              card.classList.remove('is-selected');
+              card.classList.add('is-deselected');
+            } else {
+              selectedPageNumbers.add(pageNum);
+              card.classList.remove('is-deselected');
+              card.classList.add('is-selected');
+            }
+            updateImageSelectionState();
+          };
+
+          pagesGrid.appendChild(card);
+        });
+
+        updateImageSelectionState();
+      }
+
+      function updateImageSelectionState() {
+        const total = renderedPages.length;
+        const count = selectedPageNumbers.size;
+        const imgExt = "add-text".includes('png') ? 'PNG' : 'JPG';
+        if (imgSelectHint) {
+          imgSelectHint.textContent = `Selected ${count} of ${total} page(s) • Click cards to toggle selection`;
+        }
+        if (btnDownloadSelected) {
+          if (count === 1) {
+            const pNum = Array.from(selectedPageNumbers)[0];
+            btnDownloadSelected.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 4px; vertical-align: -3px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download Page ${pNum} ${imgExt}`;
+          } else {
+            btnDownloadSelected.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 4px; vertical-align: -3px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download ${count} Selected ${imgExt}s`;
+          }
+        }
+      }
+
+      function triggerDirectDownload(blob, filename) {
+        const a = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        }, 1500);
+      }
+
+      async function downloadSingleImage(pageNum) {
+        if (!currentPdfFile) return;
+        const isPng = "add-text".includes('png');
+        const imgExt = isPng ? 'PNG' : 'JPG';
+        pagesOrganizer.style.display = 'none';
+        dropZone.style.display = 'flex';
+        uploadContent.style.display = 'none';
+        processingMsg.textContent = `Converting Page ${pageNum} to high-resolution ${imgExt}...`;
+        processingState.style.display = 'flex';
+
+        try {
+          const result = isPng
+            ? await window.PDFDock.pdfToPng(currentPdfFile, { selectedPages: [pageNum] })
+            : await window.PDFDock.pdfToJpg(currentPdfFile, { selectedPages: [pageNum] });
+          triggerDirectDownload(result.blob, result.filename);
+          showStandardResult(result.blob, result.filename, result.summary);
+        } catch (err) {
+          alert('Error converting page: ' + err.message);
+          pagesOrganizer.style.display = 'block';
+          dropZone.style.display = 'none';
+          processingState.style.display = 'none';
+        }
+      }
+
+      async function downloadSelectedImages() {
+        if (!currentPdfFile) return;
+        const isPng = "add-text".includes('png');
+        const imgExt = isPng ? 'PNG' : 'JPG';
+        const selected = Array.from(selectedPageNumbers).sort((a, b) => a - b);
+        if (selected.length === 0) {
+          alert('Please select at least one page to download.');
+          return;
+        }
+
+        pagesOrganizer.style.display = 'none';
+        dropZone.style.display = 'flex';
+        uploadContent.style.display = 'none';
+        processingMsg.textContent = `Converting ${selected.length} selected page(s) to high-resolution ${imgExt}...`;
+        processingState.style.display = 'flex';
+
+        try {
+          const result = isPng
+            ? await window.PDFDock.pdfToPng(currentPdfFile, { selectedPages: selected })
+            : await window.PDFDock.pdfToJpg(currentPdfFile, { selectedPages: selected });
+          triggerDirectDownload(result.blob, result.filename);
+          showStandardResult(result.blob, result.filename, result.summary);
+        } catch (err) {
+          alert('Error converting pages: ' + err.message);
+          pagesOrganizer.style.display = 'block';
+          dropZone.style.display = 'none';
+          processingState.style.display = 'none';
+        }
+      }
+
+      // Build Pages Grid for Reorder, Delete, Split
+      function buildPagesGrid(mode) {
+        if (!pagesGrid) return;
+        pagesGrid.innerHTML = '';
+
+        renderedPages.forEach((pageObj, idx) => {
+          const card = document.createElement('div');
+          card.className = 'page-card';
+          card.setAttribute('draggable', mode === 'reorder' ? 'true' : 'false');
+          card.dataset.index = idx;
+          card.dataset.original = pageObj.originalIndex;
+
+          const header = document.createElement('div');
+          header.className = 'page-card-header';
+          header.innerHTML = `<span class="page-badge">#${idx + 1}</span> <span>Orig. p.${pageObj.originalIndex + 1}</span>`;
+          card.appendChild(header);
+
+          const canvasWrap = document.createElement('div');
+          canvasWrap.className = 'card-canvas-wrap';
+
+          if (pageObj.dataUrl) {
+            const img = document.createElement('img');
+            img.src = pageObj.dataUrl;
+            img.alt = `Page ${idx + 1} preview`;
+            img.className = 'page-card-preview-img';
+            canvasWrap.appendChild(img);
+          } else if (pageObj.canvas) {
+            const copyCanvas = document.createElement('canvas');
+            copyCanvas.width = pageObj.canvas.width;
+            copyCanvas.height = pageObj.canvas.height;
+            const copyCtx = copyCanvas.getContext('2d');
+            copyCtx.drawImage(pageObj.canvas, 0, 0);
+            copyCanvas.className = 'page-card-preview-img';
+            canvasWrap.appendChild(copyCanvas);
+          }
+          card.appendChild(canvasWrap);
+
+          const controls = document.createElement('div');
+          controls.className = 'page-card-controls';
+
+          if (mode === 'reorder') {
+            const btnLeft = document.createElement('button');
+            btnLeft.className = 'btn-ctrl';
+            btnLeft.innerHTML = '&larr; Left';
+            btnLeft.title = 'Move Left';
+            btnLeft.onclick = (e) => { e.stopPropagation(); movePage(idx, idx - 1); };
+
+            const btnRight = document.createElement('button');
+            btnRight.className = 'btn-ctrl';
+            btnRight.innerHTML = 'Right &rarr;';
+            btnRight.title = 'Move Right';
+            btnRight.onclick = (e) => { e.stopPropagation(); movePage(idx, idx + 1); };
+
+            controls.appendChild(btnLeft);
+            controls.appendChild(btnRight);
+          } else if (mode === 'delete') {
+            const btnDel = document.createElement('button');
+            btnDel.className = 'btn-ctrl btn-del';
+            btnDel.textContent = '✕ Remove';
+            btnDel.onclick = (e) => {
+              e.stopPropagation();
+              card.classList.toggle('marked-delete');
+              btnDel.textContent = card.classList.contains('marked-delete') ? '✓ Keep' : '✕ Remove';
+              updateDeleteCount();
+            };
+            controls.appendChild(btnDel);
+          } else if (mode === 'split') {
+            card.onclick = () => card.classList.toggle('drag-target');
+            controls.innerHTML = '<span style="font-size:0.75rem;color:var(--slate-500);">Tap to select</span>';
+          }
+
+          card.appendChild(controls);
+
+          // Drag and drop events for desktop
+          if (mode === 'reorder') {
+            card.addEventListener('dragstart', (e) => {
+              card.classList.add('dragging');
+              e.dataTransfer.setData('text/plain', idx);
+            });
+            card.addEventListener('dragend', () => card.classList.remove('dragging'));
+            card.addEventListener('dragover', (e) => {
+              e.preventDefault();
+              card.classList.add('drag-target');
+            });
+            card.addEventListener('dragleave', () => card.classList.remove('drag-target'));
+            card.addEventListener('drop', (e) => {
+              e.preventDefault();
+              card.classList.remove('drag-target');
+              const fromIdx = parseInt(e.dataTransfer.getData('text/plain'), 10);
+              const toIdx = idx;
+              if (fromIdx !== toIdx) movePage(fromIdx, toIdx);
+            });
+          }
+
+          pagesGrid.appendChild(card);
+        });
+      }
+
+      function movePage(from, to) {
+        if (to < 0 || to >= renderedPages.length) return;
+        const item = renderedPages.splice(from, 1)[0];
+        renderedPages.splice(to, 0, item);
+        buildPagesGrid("add_text");
+      }
+
+      function updateDeleteCount() {
+        const allCards = pagesGrid.querySelectorAll('.page-card');
+        const deletedCards = pagesGrid.querySelectorAll('.page-card.marked-delete');
+        const countHint = document.getElementById('delete-count-hint');
+        if (countHint) {
+          countHint.textContent = `Keeping ${allCards.length - deletedCards.length} of ${allCards.length} pages (Deleting ${deletedCards.length})`;
+        }
+      }
+
+      // Build Merge Files List
+      function buildMergeFilesList() {
+        if (!mergeFilesList) return;
+        mergeFilesList.innerHTML = '';
+
+        selectedFiles.forEach((file, idx) => {
+          const row = document.createElement('div');
+          row.className = 'merge-file-row';
+          row.innerHTML = `
+            <div class="merge-file-info">
+              <span class="merge-file-idx">#${idx + 1}</span>
+              <div>
+                <p class="merge-file-name">${file.name}</p>
+                <p class="merge-file-meta">${window.PDFDock.formatBytes(file.size)}</p>
+              </div>
+            </div>
+            <div class="merge-file-actions">
+              <button type="button" class="btn-ctrl" title="Move Up" onclick="moveMergeFile(${idx}, ${idx - 1})" ${idx === 0 ? 'disabled style="opacity:0.3;"' : ''}>&uarr;</button>
+              <button type="button" class="btn-ctrl" title="Move Down" onclick="moveMergeFile(${idx}, ${idx + 1})" ${idx === selectedFiles.length - 1 ? 'disabled style="opacity:0.3;"' : ''}>&darr;</button>
+              <button type="button" class="btn-ctrl btn-del" title="Remove" onclick="removeMergeFile(${idx})">✕</button>
+            </div>
+          `;
+          mergeFilesList.appendChild(row);
+        });
+      }
+
+      window.moveMergeFile = function(from, to) {
+        if (to < 0 || to >= selectedFiles.length) return;
+        const f = selectedFiles.splice(from, 1)[0];
+        selectedFiles.splice(to, 0, f);
+        buildMergeFilesList();
+      };
+
+      window.removeMergeFile = function(idx) {
+        selectedFiles.splice(idx, 1);
+        if (selectedFiles.length === 0) {
+          pagesOrganizer.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'flex';
+          fileInput.value = '';
+        } else {
+          buildMergeFilesList();
+        }
+      };
+
+      // Action Handlers
+      const btnPreviewReordered = document.getElementById('btn-preview-reordered');
+      if (btnPreviewReordered) {
+        btnPreviewReordered.addEventListener('click', async () => {
+          const orderIndices = renderedPages.map(p => p.originalIndex);
+          pagesOrganizer.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = "Compiling reordered PDF...";
+          processingState.style.display = 'flex';
+
+          try {
+            const result = await window.PDFDock.reorderPdfPagesByArray(currentPdfFile, orderIndices);
+            showFinalPdfPreview(result.blob, result.filename, result.summary);
+          } catch (err) {
+            alert('Error: ' + err.message);
+            pagesOrganizer.style.display = 'block';
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+          }
+        });
+      }
+
+      const btnPreviewMerged = document.getElementById('btn-preview-merged');
+      if (btnPreviewMerged) {
+        btnPreviewMerged.addEventListener('click', async () => {
+          if (selectedFiles.length < 2) {
+            alert('Please add at least 2 PDF files to merge.');
+            return;
+          }
+          pagesOrganizer.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = "Merging all PDFs in arranged order...";
+          processingState.style.display = 'flex';
+
+          try {
+            const result = await window.PDFDock.mergePdfOrdered(selectedFiles);
+            showFinalPdfPreview(result.blob, result.filename, result.summary);
+          } catch (err) {
+            alert('Error: ' + err.message);
+            pagesOrganizer.style.display = 'block';
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+          }
+        });
+      }
+
+      const btnPreviewDeleted = document.getElementById('btn-preview-deleted');
+      if (btnPreviewDeleted) {
+        btnPreviewDeleted.addEventListener('click', async () => {
+          const cards = pagesGrid.querySelectorAll('.page-card');
+          const keepIndices = [];
+          cards.forEach((c) => {
+            if (!c.classList.contains('marked-delete')) {
+              keepIndices.push(parseInt(c.dataset.original, 10));
+            }
+          });
+
+          if (keepIndices.length === 0) {
+            alert('You must keep at least one page in the document.');
+            return;
+          }
+
+          pagesOrganizer.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = "Creating clean PDF with deleted pages removed...";
+          processingState.style.display = 'flex';
+
+          try {
+            const result = await window.PDFDock.deletePdfPagesByIndices(currentPdfFile, keepIndices);
+            showFinalPdfPreview(result.blob, result.filename, result.summary);
+          } catch (err) {
+            alert('Error: ' + err.message);
+            pagesOrganizer.style.display = 'block';
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+          }
+        });
+      }
+
+      const btnPreviewSplit = document.getElementById('btn-preview-split');
+      if (btnPreviewSplit) {
+        btnPreviewSplit.addEventListener('click', async () => {
+          const cards = pagesGrid.querySelectorAll('.page-card.drag-target');
+          let extractIndices = [];
+          cards.forEach(c => extractIndices.push(parseInt(c.dataset.original, 10)));
+          if (!extractIndices.length) {
+            // Default to page 1 if none highlighted
+            extractIndices = [0];
+          }
+          pagesOrganizer.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = "Extracting selected pages...";
+          processingState.style.display = 'flex';
+
+          try {
+            const result = await window.PDFDock.reorderPdfPagesByArray(currentPdfFile, extractIndices);
+            result.filename = `split-extracted-${currentPdfFile.name}`;
+            result.summary = `Extracted ${extractIndices.length} selected page(s) into a separate document.`;
+            showFinalPdfPreview(result.blob, result.filename, result.summary);
+          } catch (err) {
+            alert('Error: ' + err.message);
+            pagesOrganizer.style.display = 'block';
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+          }
+        });
+      }
+
+      // Watermark & Text Studio Logic
+      function initWatermarkStudio() {
+        if (!currentPdfFile) return;
+
+        const nameEl = document.getElementById('wm-file-name');
+        const sizeEl = document.getElementById('wm-file-size');
+        const btnChangeFile = document.getElementById('btn-change-wm-file');
+
+        if (nameEl) nameEl.textContent = currentPdfFile.name;
+        if (sizeEl) sizeEl.textContent = window.PDFDock.formatBytes(currentPdfFile.size);
+
+        if (btnChangeFile) {
+          btnChangeFile.onclick = () => {
+            optionsCard.style.display = 'none';
+            dropZone.style.display = 'flex';
+            uploadContent.style.display = 'flex';
+            fileInput.value = '';
+          };
+        }
+
+        const textInput = document.getElementById('stamp-text');
+        const posSelect = document.getElementById('stamp-pos');
+        const fontSelect = document.getElementById('stamp-font');
+        const sizeInput = document.getElementById('stamp-size');
+        const sizeVal = document.getElementById('stamp-size-val');
+        const colorInput = document.getElementById('stamp-color');
+        const colorHex = document.getElementById('stamp-color-hex');
+        const opacityInput = document.getElementById('stamp-opacity');
+        const opacityVal = document.getElementById('stamp-opacity-val');
+        const angleInput = document.getElementById('stamp-angle');
+        const angleVal = document.getElementById('stamp-angle-val');
+        const pagesSelect = document.getElementById('stamp-pages');
+        const customRangeInput = document.getElementById('stamp-custom-range');
+        const liveStamp = document.getElementById('wm-live-stamp');
+        const previewSheet = document.getElementById('wm-preview-sheet');
+
+        function updateWatermarkPreview() {
+          if (!liveStamp || !previewSheet) return;
+
+          const text = (textInput ? textInput.value : '') || 'CONFIDENTIAL';
+          const pos = posSelect ? posSelect.value : 'diagonal-45';
+          const font = fontSelect ? fontSelect.value : 'HelveticaBold';
+          const size = parseInt(sizeInput ? sizeInput.value : 48, 10);
+          const color = colorInput ? colorInput.value : '#dc2626';
+          const opacity = parseInt(opacityInput ? opacityInput.value : 25, 10) / 100;
+          const customAngle = parseInt(angleInput ? angleInput.value : 45, 10);
+
+          if (sizeVal) sizeVal.textContent = size + ' pt';
+          if (colorHex) colorHex.textContent = color.toUpperCase();
+          if (opacityVal) opacityVal.textContent = Math.round(opacity * 100) + '%';
+          if (angleVal) angleVal.textContent = (customAngle > 0 ? '+' : '') + customAngle + '°';
+
+          // Sample simulation text
+          const displayText = text.split('{n}').join('1').split('{page}').join('1').split('{total}').join('5').split('{pages}').join('5');
+          liveStamp.textContent = displayText;
+          liveStamp.style.color = color;
+          liveStamp.style.opacity = opacity;
+
+          if (font.includes('Times')) {
+            liveStamp.style.fontFamily = '"Times New Roman", Times, serif';
+          } else if (font.includes('Courier')) {
+            liveStamp.style.fontFamily = '"Courier New", Courier, monospace';
+          } else {
+            liveStamp.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+          }
+          liveStamp.style.fontWeight = font.includes('Bold') ? '800' : '500';
+
+          const scaledSize = Math.max(9, Math.round(size * 0.42));
+          liveStamp.style.fontSize = scaledSize + 'px';
+
+          let angle = customAngle;
+          if (pos === 'diagonal-45') angle = 45;
+          else if (pos === 'diagonal-minus-45') angle = -45;
+          else if (pos === 'center') angle = customAngle;
+
+          liveStamp.style.top = 'auto';
+          liveStamp.style.bottom = 'auto';
+          liveStamp.style.left = 'auto';
+          liveStamp.style.right = 'auto';
+
+          if (pos === 'diagonal-45' || pos === 'diagonal-minus-45' || pos === 'center') {
+            liveStamp.style.top = '50%';
+            liveStamp.style.left = '50%';
+            liveStamp.style.transform = 'translate(-50%, -50%) rotate(' + (-angle) + 'deg)';
+          } else if (pos === 'top-center') {
+            liveStamp.style.top = '10px';
+            liveStamp.style.left = '50%';
+            liveStamp.style.transform = 'translateX(-50%) rotate(' + (-angle) + 'deg)';
+          } else if (pos === 'top-left') {
+            liveStamp.style.top = '10px';
+            liveStamp.style.left = '10px';
+            liveStamp.style.transform = 'rotate(' + (-angle) + 'deg)';
+          } else if (pos === 'top-right') {
+            liveStamp.style.top = '10px';
+            liveStamp.style.right = '10px';
+            liveStamp.style.transform = 'rotate(' + (-angle) + 'deg)';
+          } else if (pos === 'bottom-center') {
+            liveStamp.style.bottom = '10px';
+            liveStamp.style.left = '50%';
+            liveStamp.style.transform = 'translateX(-50%) rotate(' + (-angle) + 'deg)';
+          } else if (pos === 'bottom-left') {
+            liveStamp.style.bottom = '10px';
+            liveStamp.style.left = '10px';
+            liveStamp.style.transform = 'rotate(' + (-angle) + 'deg)';
+          } else if (pos === 'bottom-right') {
+            liveStamp.style.bottom = '10px';
+            liveStamp.style.right = '10px';
+            liveStamp.style.transform = 'rotate(' + (-angle) + 'deg)';
+          }
+        }
+
+        // Preset buttons
+        const presetButtons = document.querySelectorAll('.wm-preset-btn');
+        presetButtons.forEach(btn => {
+          btn.onclick = () => {
+            const pText = btn.dataset.text;
+            const pColor = btn.dataset.color;
+            const pPos = btn.dataset.pos;
+            const pOpacity = parseFloat(btn.dataset.opacity) * 100;
+            const pSize = parseInt(btn.dataset.size, 10);
+
+            if (textInput && pText) textInput.value = pText;
+            if (colorInput && pColor) colorInput.value = pColor;
+            if (posSelect && pPos) posSelect.value = pPos;
+            if (opacityInput && !isNaN(pOpacity)) opacityInput.value = pOpacity;
+            if (sizeInput && !isNaN(pSize)) sizeInput.value = pSize;
+            if (angleInput) {
+              if (pPos === 'diagonal-45') angleInput.value = 45;
+              else if (pPos === 'diagonal-minus-45') angleInput.value = -45;
+              else angleInput.value = 0;
+            }
+            updateWatermarkPreview();
+          };
+        });
+
+        // Input listeners
+        if (textInput) textInput.oninput = updateWatermarkPreview;
+        if (colorInput) colorInput.oninput = updateWatermarkPreview;
+        if (sizeInput) sizeInput.oninput = updateWatermarkPreview;
+        if (opacityInput) opacityInput.oninput = updateWatermarkPreview;
+        if (angleInput) angleInput.oninput = updateWatermarkPreview;
+        if (fontSelect) fontSelect.onchange = updateWatermarkPreview;
+
+        if (posSelect) {
+          posSelect.onchange = () => {
+            if (posSelect.value === 'diagonal-45' && angleInput) angleInput.value = 45;
+            else if (posSelect.value === 'diagonal-minus-45' && angleInput) angleInput.value = -45;
+            else if (posSelect.value.startsWith('bottom') || posSelect.value.startsWith('top')) {
+              if (angleInput && (angleInput.value === '45' || angleInput.value === '-45')) angleInput.value = 0;
+              if (sizeInput && parseInt(sizeInput.value, 10) > 24) sizeInput.value = 14;
+              if (opacityInput && parseInt(opacityInput.value, 10) < 50) opacityInput.value = 85;
+            }
+            updateWatermarkPreview();
+          };
+        }
+
+        if (pagesSelect && customRangeInput) {
+          pagesSelect.onchange = () => {
+            customRangeInput.style.display = pagesSelect.value === 'custom' ? 'block' : 'none';
+          };
+        }
+
+        updateWatermarkPreview();
+      }
+
+      // Add Text Action
+      const btnApplyText = document.getElementById('btn-apply-text');
+      if (btnApplyText) {
+        btnApplyText.addEventListener('click', async () => {
+          if (!currentPdfFile) return;
+
+          const text = (document.getElementById('stamp-text') ? document.getElementById('stamp-text').value : '') || 'CONFIDENTIAL';
+          const pos = document.getElementById('stamp-pos') ? document.getElementById('stamp-pos').value : 'diagonal-45';
+          const font = document.getElementById('stamp-font') ? document.getElementById('stamp-font').value : 'HelveticaBold';
+          const size = parseInt(document.getElementById('stamp-size') ? document.getElementById('stamp-size').value : 48, 10);
+          const color = document.getElementById('stamp-color') ? document.getElementById('stamp-color').value : '#dc2626';
+          const opacity = (parseInt(document.getElementById('stamp-opacity') ? document.getElementById('stamp-opacity').value : 25, 10)) / 100;
+          const angle = parseInt(document.getElementById('stamp-angle') ? document.getElementById('stamp-angle').value : 45, 10);
+          const pages = document.getElementById('stamp-pages') ? document.getElementById('stamp-pages').value : 'all';
+          const customRange = (document.getElementById('stamp-custom-range') ? document.getElementById('stamp-custom-range').value : '').trim();
+          const layer = document.getElementById('stamp-layer') ? document.getElementById('stamp-layer').value : 'over';
+
+          optionsCard.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = "Applying custom watermark & text styling to PDF...";
+          processingState.style.display = 'flex';
+
+          try {
+            const result = await window.PDFDock.addTextToPdf(currentPdfFile, text, {
+              position: pos,
+              fontFamily: font,
+              fontSize: size,
+              color: color,
+              opacity: opacity,
+              rotation: angle,
+              pages: pages,
+              pageRange: customRange,
+              layer: layer
+            });
+            showFinalPdfPreview(result.blob, result.filename, result.summary);
+          } catch (err) {
+            alert('Error adding watermark/text: ' + err.message);
+            optionsCard.style.display = 'flex';
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+          }
+        });
+      }
+
+      // Protect PDF Studio Logic
+      let protectInitialized = false;
+      let selectedProtectAlgo = 'AES-256';
+
+      function initProtectStudio() {
+        if (!currentPdfFile) return;
+
+        const nameEl = document.getElementById('protect-file-name');
+        const origSizeEl = document.getElementById('protect-orig-size');
+        const btnChangeFile = document.getElementById('btn-change-protect-file');
+        const passInput = document.getElementById('pdf-password');
+        const confirmInput = document.getElementById('pdf-confirm-password');
+        const btnTogglePass = document.getElementById('btn-toggle-pass');
+        const btnToggleConfirm = document.getElementById('btn-toggle-confirm');
+        const strengthFill = document.getElementById('pass-strength-fill');
+        const strengthLabel = document.getElementById('pass-strength-label');
+        const strengthHint = document.getElementById('pass-strength-hint');
+        const matchFeedback = document.getElementById('pass-match-feedback');
+        const btnToggleAdvanced = document.getElementById('btn-toggle-advanced');
+        const advancedPanel = document.getElementById('protect-advanced-panel');
+        const accordionArrow = document.getElementById('accordion-arrow');
+        const algoAes = document.getElementById('algo-aes');
+        const algoRc4 = document.getElementById('algo-rc4');
+
+        if (nameEl) nameEl.textContent = currentPdfFile.name;
+        if (origSizeEl) origSizeEl.textContent = window.PDFDock.formatBytes(currentPdfFile.size);
+
+        if (btnChangeFile) {
+          btnChangeFile.onclick = () => {
+            optionsCard.style.display = 'none';
+            dropZone.style.display = 'flex';
+            uploadContent.style.display = 'flex';
+            fileInput.value = '';
+            if (passInput) passInput.value = '';
+            if (confirmInput) confirmInput.value = '';
+            updateProtectPasswordState();
+          };
+        }
+
+        function updateProtectPasswordState() {
+          const pass = passInput ? passInput.value : '';
+          const confirm = confirmInput ? confirmInput.value : '';
+
+          // Strength calculation
+          let score = 0;
+          if (pass.length >= 6) score++;
+          if (pass.length >= 10) score++;
+          if (/[A-Z]/.test(pass) && /[a-z]/.test(pass)) score++;
+          if (/[0-9]/.test(pass)) score++;
+          if (/[^A-Za-z0-9]/.test(pass)) score++;
+
+          if (strengthFill && strengthLabel && strengthHint) {
+            strengthFill.className = 'strength-bar-fill';
+            strengthLabel.className = 'strength-label';
+
+            if (pass.length === 0) {
+              strengthFill.style.width = '0%';
+              strengthLabel.textContent = 'Enter a password';
+              strengthHint.textContent = 'Min 6 characters recommended';
+            } else if (pass.length < 6 || score <= 1) {
+              strengthFill.classList.add('weak');
+              strengthLabel.classList.add('weak');
+              strengthLabel.textContent = 'Weak';
+              strengthHint.textContent = 'Add numbers, symbols & length';
+            } else if (score <= 3) {
+              strengthFill.classList.add('medium');
+              strengthLabel.classList.add('medium');
+              strengthLabel.textContent = 'Good / Medium';
+              strengthHint.textContent = 'Strong enough for everyday use';
+            } else {
+              strengthFill.classList.add('strong');
+              strengthLabel.classList.add('strong');
+              strengthLabel.textContent = 'Very Strong';
+              strengthHint.textContent = 'High entropy, maximum security';
+            }
+          }
+
+          // Match check
+          if (matchFeedback) {
+            if (confirm.length === 0) {
+              matchFeedback.style.display = 'none';
+            } else if (pass === confirm) {
+              matchFeedback.style.display = 'flex';
+              matchFeedback.className = 'pass-match-feedback match';
+              matchFeedback.innerHTML = '✓ Passwords match';
+            } else {
+              matchFeedback.style.display = 'flex';
+              matchFeedback.className = 'pass-match-feedback mismatch';
+              matchFeedback.innerHTML = '✕ Passwords do not match';
+            }
+          }
+        }
+
+        if (!protectInitialized) {
+          protectInitialized = true;
+
+          if (passInput) passInput.addEventListener('input', updateProtectPasswordState);
+          if (confirmInput) confirmInput.addEventListener('input', updateProtectPasswordState);
+
+          function toggleVisibility(inputEl, btnEl) {
+            if (!inputEl) return;
+            const isPass = inputEl.type === 'password';
+            inputEl.type = isPass ? 'text' : 'password';
+            btnEl.innerHTML = isPass
+              ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>'
+              : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
+            btnEl.title = isPass ? 'Hide Password' : 'Show Password';
+          }
+
+          if (btnTogglePass && passInput) {
+            btnTogglePass.addEventListener('click', () => toggleVisibility(passInput, btnTogglePass));
+          }
+          if (btnToggleConfirm && confirmInput) {
+            btnToggleConfirm.addEventListener('click', () => toggleVisibility(confirmInput, btnToggleConfirm));
+          }
+
+          // Advanced settings accordion toggle
+          if (btnToggleAdvanced && advancedPanel) {
+            btnToggleAdvanced.addEventListener('click', () => {
+              const isHidden = advancedPanel.style.display === 'none';
+              advancedPanel.style.display = isHidden ? 'flex' : 'none';
+              btnToggleAdvanced.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+              if (accordionArrow) {
+                accordionArrow.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+              }
+            });
+          }
+
+          // Algorithm selection
+          if (algoAes && algoRc4) {
+            algoAes.addEventListener('click', () => {
+              algoAes.classList.add('active');
+              algoRc4.classList.remove('active');
+              selectedProtectAlgo = 'AES-256';
+            });
+            algoRc4.addEventListener('click', () => {
+              algoRc4.classList.add('active');
+              algoAes.classList.remove('active');
+              selectedProtectAlgo = 'RC4';
+            });
+          }
+        }
+
+        updateProtectPasswordState();
+        if (passInput) passInput.focus();
+      }
+
+      function showProtectedResult(blob, filename, summaryText, algorithm, appliedPassword) {
+        finalPdfBlob = blob;
+        window.finalPdfBlob = blob;
+        finalFilename = filename;
+        if (finalPdfUrl) URL.revokeObjectURL(finalPdfUrl);
+        finalPdfUrl = URL.createObjectURL(blob);
+
+        const resCheck = resultBox.querySelector('.result-check');
+        if (resCheck) {
+          resCheck.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>';
+          resCheck.style.background = '#059669';
+        }
+        const resTitle = resultBox.querySelector('.result-title');
+        if (resTitle) resTitle.textContent = 'Your PDF is Securely Protected!';
+
+        const algoLabel = algorithm === 'AES-256' ? 'AES-256 bit' : '128-bit RC4';
+        resultSummary.innerHTML = `
+          <div class="protected-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Lock Active &bull; ${algoLabel} Encryption</span>
+          </div>
+          <p style="margin: 0.35rem 0 0.5rem; color: var(--slate-800); font-weight: 700; font-size: 1.05rem;">${filename}</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.85rem; color: var(--slate-500);">${summaryText} (${window.PDFDock.formatBytes(blob.size)})</p>
+          <div style="margin: 0.75rem auto 1.25rem; max-width: 480px; padding: 0.75rem 1rem; background: #f8fafc; border: 1px dashed var(--slate-300); border-radius: 8px; font-size: 0.82rem; color: var(--slate-600); text-align: left; line-height: 1.5;">
+            🔒 <strong>Verification Guarantee:</strong> When you open this PDF in Adobe Acrobat, Google Chrome, Microsoft Edge, or Apple Preview, you will be prompted to enter your password before any content is shown.
+          </div>
+        `;
+
+        if (downloadBtn) {
+          downloadBtn.innerHTML = `
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Protected PDF
+          `;
+        }
+
+        dropZone.style.display = 'none';
+        processingState.style.display = 'none';
+        if (optionsCard) optionsCard.style.display = 'none';
+        resultBox.style.display = 'block';
+      }
+
+      // Protect PDF Action
+      const btnApplyProtect = document.getElementById('btn-apply-protect');
+      if (btnApplyProtect) {
+        btnApplyProtect.addEventListener('click', async () => {
+          if (!currentPdfFile) return;
+
+          const passInput = document.getElementById('pdf-password');
+          const confirmInput = document.getElementById('pdf-confirm-password');
+          const pass = (passInput ? passInput.value : '').trim();
+          const confirm = (confirmInput ? confirmInput.value : '').trim();
+
+          if (!pass) {
+            alert('Please enter a password to protect your PDF.');
+            if (passInput) passInput.focus();
+            return;
+          }
+
+          if (confirmInput && pass !== confirm) {
+            alert('Password and Confirm Password do not match. Please re-enter.');
+            if (confirmInput) confirmInput.focus();
+            return;
+          }
+
+          const allowPrint = document.getElementById('perm-allow-printing') ? document.getElementById('perm-allow-printing').checked : true;
+          const allowCopy = document.getElementById('perm-allow-copying') ? document.getElementById('perm-allow-copying').checked : true;
+          const allowMod = document.getElementById('perm-allow-modifying') ? document.getElementById('perm-allow-modifying').checked : false;
+
+          optionsCard.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = `Applying ${selectedProtectAlgo} encryption & locking PDF...`;
+          processingState.style.display = 'flex';
+
+          try {
+            const result = await window.PDFDock.protectPdf(currentPdfFile, pass, {
+              algorithm: selectedProtectAlgo,
+              allowPrinting: allowPrint,
+              allowCopying: allowCopy,
+              allowModifying: allowMod
+            });
+            showProtectedResult(result.blob, result.filename, result.summary, result.algorithm, pass);
+          } catch (err) {
+            alert('Error protecting PDF: ' + err.message);
+            optionsCard.style.display = 'flex';
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+          }
+        });
+      }
+
+      // Compress PDF Options Logic
+      let currentReductionTarget = 70;
+      let compressSampleCache = {};
+
+      function initCompressOptions() {
+        if (!currentPdfFile) return;
+        compressSampleCache = {};
+        const nameEl = document.getElementById('compress-file-name');
+        const origSizeEl = document.getElementById('compress-orig-size');
+        const estOrigLabel = document.getElementById('est-orig-label');
+        const estNewLabel = document.getElementById('est-new-label');
+        const slider = document.getElementById('compress-slider');
+        const sliderVal = document.getElementById('compress-slider-val');
+        const btnCompress = document.getElementById('btn-apply-compress');
+        const btnChangeFile = document.getElementById('btn-change-compress-file');
+
+        if (btnChangeFile) {
+          btnChangeFile.onclick = () => {
+            optionsCard.style.display = 'none';
+            dropZone.style.display = 'flex';
+            uploadContent.style.display = 'flex';
+            fileInput.value = '';
+          };
+        }
+
+        const origBytes = currentPdfFile.size;
+        const origFormatted = window.PDFDock.formatBytes(origBytes);
+
+        if (nameEl) nameEl.textContent = currentPdfFile.name;
+        if (origSizeEl) origSizeEl.textContent = origFormatted;
+        if (estOrigLabel) estOrigLabel.textContent = origFormatted;
+
+        let currentEstimateReq = 0;
+
+        async function updateReductionUI(reduction) {
+          currentReductionTarget = reduction;
+          if (slider) slider.value = reduction;
+          if (sliderVal) sliderVal.textContent = reduction + '%';
+
+          // Update card active states
+          const cards = document.querySelectorAll('.compress-level-card');
+          cards.forEach(card => {
+            const cardRed = parseInt(card.dataset.reduction, 10);
+            card.classList.toggle('active', cardRed === reduction);
+          });
+
+          if (btnCompress) {
+            btnCompress.textContent = `⚡ Compress PDF (Reduce by ${reduction}%) & Preview`;
+          }
+
+          const reqId = ++currentEstimateReq;
+
+          // Check sample cache first for immediate update
+          if (compressSampleCache[reduction] && typeof compressSampleCache[reduction].estimatedBytes === 'number') {
+            const est = compressSampleCache[reduction];
+            if (estNewLabel) estNewLabel.textContent = '~' + window.PDFDock.formatBytes(est.estimatedBytes) + ` (-${est.savingsPercent}%)`;
+            return;
+          }
+
+          // If estimator is available, sample Page 1 at target scale & quality
+          if (window.PDFDock && window.PDFDock.estimateCompressedPdfSize) {
+            try {
+              const est = await window.PDFDock.estimateCompressedPdfSize(currentPdfFile, reduction, compressSampleCache);
+              if (reqId === currentEstimateReq && estNewLabel) {
+                estNewLabel.textContent = '~' + window.PDFDock.formatBytes(est.estimatedBytes) + ` (-${est.savingsPercent}%)`;
+              }
+            } catch (err) {
+              const estBytes = Math.max(1024, Math.round(origBytes * (1 - reduction / 100)));
+              if (estNewLabel) estNewLabel.textContent = '~' + window.PDFDock.formatBytes(estBytes) + ` (-${reduction}%)`;
+            }
+          } else {
+            const estBytes = Math.max(1024, Math.round(origBytes * (1 - reduction / 100)));
+            if (estNewLabel) estNewLabel.textContent = '~' + window.PDFDock.formatBytes(estBytes) + ` (-${reduction}%)`;
+          }
+        }
+
+        // Card clicks
+        const cards = document.querySelectorAll('.compress-level-card');
+        cards.forEach(card => {
+          card.onclick = () => {
+            const red = parseInt(card.dataset.reduction, 10);
+            updateReductionUI(red);
+          };
+          card.onkeydown = (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const red = parseInt(card.dataset.reduction, 10);
+              updateReductionUI(red);
+            }
+          };
+        });
+
+        // Slider input
+        if (slider) {
+          slider.oninput = (e) => {
+            const val = parseInt(e.target.value, 10);
+            updateReductionUI(val);
+          };
+        }
+
+        // Default to Recommended 70%
+        updateReductionUI(70);
+      }
+
+      const btnApplyCompress = document.getElementById('btn-apply-compress');
+      if (btnApplyCompress) {
+        btnApplyCompress.addEventListener('click', async () => {
+          if (!currentPdfFile) return;
+          optionsCard.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = `Compressing PDF to reduce file size by ~${currentReductionTarget}%...`;
+          processingState.style.display = 'flex';
+
+          try {
+            const result = await window.PDFDock.compressPdf(currentPdfFile, {
+              targetReduction: currentReductionTarget,
+              sampleCache: compressSampleCache
+            });
+            showFinalPdfPreview(result.blob, result.filename, result.summary);
+          } catch (err) {
+            alert('Error compressing PDF: ' + err.message);
+            optionsCard.style.display = 'flex';
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+          }
+        });
+      }
+
+      // Sign PDF & Add Image Studio
+      let sigPadCanvas = null;
+      let sigPadCtx = null;
+      let isDrawingSig = false;
+      let sigHasDrawn = false;
+      let activeSigMode = 'draw';
+      let uploadedStampSource = null;
+
+      function generateTypedSignatureImage(text) {
+        const c = document.createElement('canvas');
+        c.width = 600;
+        c.height = 150;
+        const ctx = c.getContext('2d');
+        ctx.clearRect(0, 0, c.width, c.height);
+        ctx.font = 'italic 50px "Brush Script MT", "Dancing Script", cursive, sans-serif';
+        ctx.fillStyle = '#1e3a8a';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(text, c.width / 2, c.height / 2);
+        return c.toDataURL('image/png');
+      }
+
+      function handleStampImageUpload(file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          uploadedStampSource = e.target.result;
+          const previewDiv = document.getElementById('sig-upload-preview');
+          if (previewDiv) {
+            previewDiv.innerHTML = `<img src="${uploadedStampSource}" alt="Stamp Preview" style="max-height: 80px; max-width: 100%; border: 1px solid var(--slate-300); border-radius: 4px; padding: 4px; background: #fff;">`;
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function switchSigTab(mode) {
+        activeSigMode = mode;
+        const tabDraw = document.getElementById('tab-draw');
+        const tabType = document.getElementById('tab-type');
+        const tabUpload = document.getElementById('tab-upload');
+        const paneDraw = document.getElementById('sig-draw-pane');
+        const paneType = document.getElementById('sig-type-pane');
+        const paneUpload = document.getElementById('sig-upload-pane');
+
+        if (tabDraw) tabDraw.classList.toggle('active', mode === 'draw');
+        if (tabType) tabType.classList.toggle('active', mode === 'type');
+        if (tabUpload) tabUpload.classList.toggle('active', mode === 'upload');
+
+        if (paneDraw) paneDraw.style.display = mode === 'draw' ? 'block' : 'none';
+        if (paneType) paneType.style.display = mode === 'type' ? 'block' : 'none';
+        if (paneUpload) paneUpload.style.display = mode === 'upload' ? 'block' : 'none';
+      }
+
+      function initSignaturePad() {
+        sigPadCanvas = document.getElementById('sig-pad');
+        if (!sigPadCanvas) return;
+        sigPadCtx = sigPadCanvas.getContext('2d');
+        sigPadCtx.lineWidth = 2.5;
+        sigPadCtx.lineCap = 'round';
+        sigPadCtx.lineJoin = 'round';
+        sigPadCtx.strokeStyle = '#1e3a8a';
+
+        function getCanvasPos(e) {
+          const rect = sigPadCanvas.getBoundingClientRect();
+          const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+          const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+          const scaleX = sigPadCanvas.width / rect.width;
+          const scaleY = sigPadCanvas.height / rect.height;
+          return {
+            x: (clientX - rect.left) * scaleX,
+            y: (clientY - rect.top) * scaleY
+          };
+        }
+
+        function startDraw(e) {
+          isDrawingSig = true;
+          sigHasDrawn = true;
+          const pos = getCanvasPos(e);
+          sigPadCtx.beginPath();
+          sigPadCtx.moveTo(pos.x, pos.y);
+          if (e.touches) e.preventDefault();
+        }
+
+        function moveDraw(e) {
+          if (!isDrawingSig) return;
+          const pos = getCanvasPos(e);
+          sigPadCtx.lineTo(pos.x, pos.y);
+          sigPadCtx.stroke();
+          if (e.touches) e.preventDefault();
+        }
+
+        function stopDraw(e) {
+          if (!isDrawingSig) return;
+          isDrawingSig = false;
+          if (e.touches) e.preventDefault();
+        }
+
+        sigPadCanvas.addEventListener('mousedown', startDraw);
+        sigPadCanvas.addEventListener('mousemove', moveDraw);
+        window.addEventListener('mouseup', stopDraw);
+
+        sigPadCanvas.addEventListener('touchstart', startDraw, { passive: false });
+        sigPadCanvas.addEventListener('touchmove', moveDraw, { passive: false });
+        sigPadCanvas.addEventListener('touchend', stopDraw, { passive: false });
+
+        const btnClearSig = document.getElementById('btn-clear-sig');
+        if (btnClearSig) {
+          btnClearSig.addEventListener('click', () => {
+            sigPadCtx.clearRect(0, 0, sigPadCanvas.width, sigPadCanvas.height);
+            sigHasDrawn = false;
+          });
+        }
+
+        const tabDraw = document.getElementById('tab-draw');
+        const tabType = document.getElementById('tab-type');
+        const tabUpload = document.getElementById('tab-upload');
+        if (tabDraw) tabDraw.addEventListener('click', () => switchSigTab('draw'));
+        if (tabType) tabType.addEventListener('click', () => switchSigTab('type'));
+        if (tabUpload) tabUpload.addEventListener('click', () => switchSigTab('upload'));
+
+        const sigTypedInput = document.getElementById('sig-typed-input');
+        const sigTypedPreview = document.getElementById('sig-typed-preview');
+        if (sigTypedInput && sigTypedPreview) {
+          sigTypedInput.addEventListener('input', (e) => {
+            sigTypedPreview.textContent = e.target.value || '(Empty)';
+          });
+        }
+
+        const sigFileInput = document.getElementById('sig-file-input');
+        if (sigFileInput) {
+          sigFileInput.addEventListener('change', (e) => {
+            if (e.target.files && e.target.files.length) {
+              handleStampImageUpload(e.target.files[0]);
+            }
+          });
+        }
+      }
+
+      const btnApplySignature = document.getElementById('btn-apply-signature');
+      if (btnApplySignature) {
+        btnApplySignature.addEventListener('click', async () => {
+          let sigSource = null;
+          if (activeSigMode === 'draw') {
+            if (!sigHasDrawn) {
+              alert('Please draw your signature first or switch to Type / Upload Stamp.');
+              return;
+            }
+            sigSource = sigPadCanvas.toDataURL('image/png');
+          } else if (activeSigMode === 'type') {
+            const typedText = (document.getElementById('sig-typed-input').value || '').trim();
+            if (!typedText) {
+              alert('Please type your name for the signature.');
+              return;
+            }
+            sigSource = generateTypedSignatureImage(typedText);
+          } else if (activeSigMode === 'upload') {
+            if (!uploadedStampSource) {
+              alert('Please select an image stamp or signature file.');
+              return;
+            }
+            sigSource = uploadedStampSource;
+          }
+
+          if (!sigSource) {
+            alert('Please provide a signature or image stamp.');
+            return;
+          }
+
+          const position = document.getElementById('sig-pos') ? document.getElementById('sig-pos').value : 'bottom-right';
+          const targetPage = document.getElementById('sig-page') ? document.getElementById('sig-page').value : 'last';
+
+          optionsCard.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'none';
+          processingMsg.textContent = "Signing PDF document...";
+          processingState.style.display = 'flex';
+
+          try {
+            const result = await window.PDFDock.addImageToPdf(currentPdfFile, sigSource, { position, targetPage });
+            showFinalPdfPreview(result.blob, result.filename, result.summary);
+          } catch (err) {
+            alert('Error signing PDF: ' + err.message);
+            optionsCard.style.display = 'flex';
+            dropZone.style.display = 'none';
+            processingState.style.display = 'none';
+          }
+        });
+      }
+
+      // Direct Tool Execution (Compress, JPG->PDF, Word->PDF, etc.)
+      async function executeDirectTool() {
+        uploadContent.style.display = 'none';
+        const fileExt = (selectedFiles[0] && selectedFiles[0].name) ? selectedFiles[0].name.split('.').pop().toLowerCase() : '';
+        if (fileExt === 'docx') {
+          processingMsg.textContent = "Converting Word document layout, styles & tables into PDF...";
+        } else if (fileExt === 'xlsx' || fileExt === 'xls' || fileExt === 'csv') {
+          processingMsg.textContent = "Formatting Excel sheets & gridlines into PDF...";
+        } else if (fileExt === 'pptx' || fileExt === 'ppt') {
+          processingMsg.textContent = "Rendering PowerPoint presentation slides into PDF...";
+        } else {
+          processingMsg.textContent = "Processing file in browser...";
+        }
+        processingState.style.display = 'flex';
+
+        try {
+          let result;
+          const mode = "add_text";
+          if (mode === "images_to_pdf") {
+            result = await window.PDFDock.jpgToPdf(selectedFiles);
+          } else if (mode === "pdf_to_images") {
+            result = await window.PDFDock.pdfToJpg(selectedFiles[0]);
+          } else if (mode === "doc_to_pdf" || mode === "single_pdf_direct") {
+            result = await window.PDFDock.compressPdf(selectedFiles[0]);
+          } else if (mode === "add_image") {
+            return;
+          }
+
+          if (result.blob.type === 'application/pdf') {
+            showFinalPdfPreview(result.blob, result.filename, result.summary);
+          } else {
+            // Non-PDF output (ZIP, JPG, PNG, DOC, XLSX, TXT)
+            showStandardResult(result.blob, result.filename, result.summary);
+          }
+        } catch (err) {
+          alert('Error: ' + err.message);
+          uploadContent.style.display = 'flex';
+          processingState.style.display = 'none';
+        }
+      }
+
+      // Display Complete Pre-Export PDF Preview
+      async function showFinalPdfPreview(blob, filename, summaryText) {
+        finalPdfBlob = blob;
+        finalFilename = filename;
+        if (finalPdfUrl) URL.revokeObjectURL(finalPdfUrl);
+        finalPdfUrl = URL.createObjectURL(blob);
+
+        previewSummary.textContent = summaryText + ` (${window.PDFDock.formatBytes(blob.size)})`;
+        pdfPreviewFrame.src = finalPdfUrl + '#toolbar=1&navpanes=0';
+
+        // Also render scrollable previews for mobile browsers
+        try {
+          const previewPages = await window.PDFDock.renderPdfPagesToCanvases(blob, 0.6);
+          previewMobileScroll.innerHTML = '';
+          previewPages.forEach(p => {
+            if (p.dataUrl) {
+              const img = document.createElement('img');
+              img.src = p.dataUrl;
+              img.alt = `Page ${p.pageNum} preview`;
+              img.style.maxWidth = '100%';
+              img.style.height = 'auto';
+              img.style.display = 'block';
+              img.style.borderRadius = '4px';
+              img.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+              img.style.marginBottom = '1rem';
+              previewMobileScroll.appendChild(img);
+            } else {
+              previewMobileScroll.appendChild(p.canvas);
+            }
+          });
+        } catch (e) {
+          console.warn('Mobile canvas preview fallback skipped', e);
+        }
+
+        if (rearrangeBtn) {
+          const tMode = "add_text";
+          if (tMode === "compress") {
+            rearrangeBtn.innerHTML = '&larr; Change Compression Level';
+          } else if (tMode === "reorder" || tMode === "delete" || tMode === "split" || tMode === "merge") {
+            rearrangeBtn.innerHTML = '&larr; Re-arrange / Edit Pages';
+          } else if (tMode === "add_text") {
+            rearrangeBtn.innerHTML = '&larr; Modify Watermark Settings';
+          } else if (tMode === "protect" || tMode === "add_image") {
+            rearrangeBtn.innerHTML = '&larr; Modify Settings';
+          } else {
+            rearrangeBtn.innerHTML = '&larr; Convert Another File';
+          }
+        }
+
+        dropZone.style.display = 'none';
+        processingState.style.display = 'none';
+        if (pagesOrganizer) pagesOrganizer.style.display = 'none';
+        if (optionsCard) optionsCard.style.display = 'none';
+        finalPreviewContainer.style.display = 'block';
+      }
+
+      // Display Standard Result Box (for non-PDF outputs)
+      function showStandardResult(blob, filename, summaryText) {
+        finalPdfBlob = blob;
+        finalFilename = filename;
+        if (finalPdfUrl) URL.revokeObjectURL(finalPdfUrl);
+        finalPdfUrl = URL.createObjectURL(blob);
+
+        resultSummary.textContent = summaryText + ` (${window.PDFDock.formatBytes(blob.size)})`;
+        dropZone.style.display = 'none';
+        processingState.style.display = 'none';
+        if (pagesOrganizer) pagesOrganizer.style.display = 'none';
+        if (backToPagesBtn && renderedPages && renderedPages.length > 0) {
+          backToPagesBtn.style.display = 'inline-flex';
+        }
+        resultBox.style.display = 'block';
+      }
+
+      // Download Handler
+      downloadFinalBtn.addEventListener('click', () => {
+        if (!finalPdfUrl) return;
+        const a = document.createElement('a');
+        a.href = finalPdfUrl;
+        a.download = finalFilename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      });
+
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', () => {
+          if (!finalPdfUrl) return;
+          const a = document.createElement('a');
+          a.href = finalPdfUrl;
+          a.download = finalFilename;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        });
+      }
+
+      // Wire up selection action buttons
+      if (btnSelectAll) {
+        btnSelectAll.addEventListener('click', () => {
+          renderedPages.forEach((_, idx) => selectedPageNumbers.add(idx + 1));
+          if (pagesGrid) {
+            pagesGrid.querySelectorAll('.page-card').forEach(card => {
+              card.classList.remove('is-deselected');
+              card.classList.add('is-selected');
+            });
+          }
+          if (typeof updateImageSelectionState === 'function') updateImageSelectionState();
+        });
+      }
+
+      if (btnDeselectAll) {
+        btnDeselectAll.addEventListener('click', () => {
+          selectedPageNumbers.clear();
+          if (pagesGrid) {
+            pagesGrid.querySelectorAll('.page-card').forEach(card => {
+              card.classList.remove('is-selected');
+              card.classList.add('is-deselected');
+            });
+          }
+          if (typeof updateImageSelectionState === 'function') updateImageSelectionState();
+        });
+      }
+
+      if (btnDownloadSelected) {
+        btnDownloadSelected.addEventListener('click', () => {
+          if (typeof downloadSelectedImages === 'function') downloadSelectedImages();
+        });
+      }
+
+      if (backToPagesBtn) {
+        backToPagesBtn.addEventListener('click', () => {
+          resultBox.style.display = 'none';
+          if (pagesOrganizer) pagesOrganizer.style.display = 'block';
+        });
+      }
+
+      // Rearrange / Edit Pages Button
+      rearrangeBtn.addEventListener('click', () => {
+        finalPreviewContainer.style.display = 'none';
+        if (pagesOrganizer) {
+          pagesOrganizer.style.display = 'block';
+        } else if (optionsCard) {
+          optionsCard.style.display = 'flex';
+        } else {
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'flex';
+        }
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          resultBox.style.display = 'none';
+          dropZone.style.display = 'flex';
+          uploadContent.style.display = 'flex';
+          fileInput.value = '';
+          const p1 = document.getElementById('pdf-password');
+          const p2 = document.getElementById('pdf-confirm-password');
+          if (p1) p1.value = '';
+          if (p2) p2.value = '';
+          const resCheck = resultBox.querySelector('.result-check');
+          if (resCheck) {
+            resCheck.innerHTML = '✓';
+            resCheck.style.background = 'var(--success)';
+          }
+          const resTitle = resultBox.querySelector('.result-title');
+          if (resTitle) resTitle.textContent = 'Your File is Ready!';
+          if (downloadBtn) {
+            downloadBtn.innerHTML = `
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Result
+            `;
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- ADSTERRA / MONETAG FOOTER SCRIPT PLACEHOLDER -->
+  <!-- START FOOTER AD CODE -->
+  <!-- Example: Adsterra Social Bar or Monetag OnClick -->
+  <!-- END FOOTER AD CODE -->
+</body>
+</html>
