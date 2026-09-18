@@ -2925,9 +2925,11 @@ for tool in tools_data:
 
       // Compress PDF Options Logic
       let currentReductionTarget = 70;
+      let compressSampleCache = {{}};
 
       function initCompressOptions() {{
         if (!currentPdfFile) return;
+        compressSampleCache = {{}};
         const nameEl = document.getElementById('compress-file-name');
         const origSizeEl = document.getElementById('compress-orig-size');
         const estOrigLabel = document.getElementById('est-orig-label');
@@ -2953,7 +2955,9 @@ for tool in tools_data:
         if (origSizeEl) origSizeEl.textContent = origFormatted;
         if (estOrigLabel) estOrigLabel.textContent = origFormatted;
 
-        function updateReductionUI(reduction) {{
+        let currentEstimateReq = 0;
+
+        async function updateReductionUI(reduction) {{
           currentReductionTarget = reduction;
           if (slider) slider.value = reduction;
           if (sliderVal) sliderVal.textContent = reduction + '%';
@@ -2965,12 +2969,33 @@ for tool in tools_data:
             card.classList.toggle('active', cardRed === reduction);
           }});
 
-          // Update estimated output size
-          const estBytes = Math.max(1024, Math.round(origBytes * (1 - reduction / 100)));
-          if (estNewLabel) estNewLabel.textContent = '~' + window.PDFDock.formatBytes(estBytes) + ` (-${{reduction}}%)`;
-
           if (btnCompress) {{
             btnCompress.textContent = `⚡ Compress PDF (Reduce by ${{reduction}}%) & Preview`;
+          }}
+
+          const reqId = ++currentEstimateReq;
+
+          // Check sample cache first for immediate update
+          if (compressSampleCache[reduction] && typeof compressSampleCache[reduction].estimatedBytes === 'number') {{
+            const est = compressSampleCache[reduction];
+            if (estNewLabel) estNewLabel.textContent = '~' + window.PDFDock.formatBytes(est.estimatedBytes) + ` (-${{est.savingsPercent}}%)`;
+            return;
+          }}
+
+          // If estimator is available, sample Page 1 at target scale & quality
+          if (window.PDFDock && window.PDFDock.estimateCompressedPdfSize) {{
+            try {{
+              const est = await window.PDFDock.estimateCompressedPdfSize(currentPdfFile, reduction, compressSampleCache);
+              if (reqId === currentEstimateReq && estNewLabel) {{
+                estNewLabel.textContent = '~' + window.PDFDock.formatBytes(est.estimatedBytes) + ` (-${{est.savingsPercent}}%)`;
+              }}
+            }} catch (err) {{
+              const estBytes = Math.max(1024, Math.round(origBytes * (1 - reduction / 100)));
+              if (estNewLabel) estNewLabel.textContent = '~' + window.PDFDock.formatBytes(estBytes) + ` (-${{reduction}}%)`;
+            }}
+          }} else {{
+            const estBytes = Math.max(1024, Math.round(origBytes * (1 - reduction / 100)));
+            if (estNewLabel) estNewLabel.textContent = '~' + window.PDFDock.formatBytes(estBytes) + ` (-${{reduction}}%)`;
           }}
         }}
 
@@ -3013,7 +3038,10 @@ for tool in tools_data:
           processingState.style.display = 'flex';
 
           try {{
-            const result = await window.PDFDock.compressPdf(currentPdfFile, {{ targetReduction: currentReductionTarget }});
+            const result = await window.PDFDock.compressPdf(currentPdfFile, {{
+              targetReduction: currentReductionTarget,
+              sampleCache: compressSampleCache
+            }});
             showFinalPdfPreview(result.blob, result.filename, result.summary);
           }} catch (err) {{
             alert('Error compressing PDF: ' + err.message);

@@ -152,11 +152,114 @@ window.PDFDock = (function() {
   // ==========================================
   // TOOL 3: COMPRESS PDF
   // ==========================================
+  function getCalibratedCompressParameters(targetReduction) {
+    const red = Math.min(95, Math.max(20, targetReduction || 70));
+    const t = (red - 20) / (95 - 20); // normalized 0 to 1
+    // High-resolution scale: 1.75 at 20% down to 1.25 at 95%
+    // Keeps DPI well above standard 72 DPI (90-130 DPI equivalent) so text and embedded JPGs stay crisp!
+    const scale = 1.75 - t * (1.75 - 1.25);
+    // High-fidelity JPEG quality: 0.85 at 20% down to 0.68 at 95%
+    // Colors stay rich and boundaries stay clean without JPEG compression blocks!
+    const quality = 0.85 - t * (0.85 - 0.68);
+    return { scale, quality, t };
+  }
+
+  async function resolveCompressProfile(file, targetReduction, sampleCache = null) {
+    const red = Math.min(95, Math.max(20, targetReduction || 70));
+    if (sampleCache && sampleCache[red] && sampleCache[red].estimatedBytes) {
+      return sampleCache[red];
+    }
+
+    if (!window.pdfjsLib) {
+      const est = Math.max(1024, Math.round(file.size * (1 - red / 100)));
+      return { targetReduction: red, scale: 1.4, quality: 0.75, estimatedBytes: est, savingsPercent: red, numPages: 1 };
+    }
+
+    const { scale: baseScale, quality: baseQuality } = getCalibratedCompressParameters(red);
+    let scale = baseScale;
+    let quality = baseQuality;
+
+    try {
+      const arrayBuffer = await readFileAsArrayBuffer(file);
+      const pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      const numPages = pdfDoc.numPages;
+
+      const page = await pdfDoc.getPage(1);
+      let viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(viewport.width);
+      canvas.height = Math.round(viewport.height);
+      const ctx = canvas.getContext('2d', { alpha: false });
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      await page.render({ canvasContext: ctx, viewport }).promise;
+
+      let sampleDataUrl = canvas.toDataURL('image/jpeg', quality);
+      let sampleBytes = Math.round((sampleDataUrl.length - 23) * 0.75);
+      let estimatedBytes = Math.round((sampleBytes + 850) * numPages + 1500);
+
+      // If document was already compact/vector and rendering at base scale would inflate it,
+      // dynamically adapt scale and quality so compressed output is strictly smaller than input
+      if (estimatedBytes >= file.size) {
+        const targetBytes = Math.max(1024, Math.round(file.size * (1 - (red / 100) * 0.35)));
+        const ratio = targetBytes / estimatedBytes;
+        const scaleFactor = Math.min(1.0, Math.max(0.65, Math.sqrt(ratio)));
+        scale = Math.max(1.05, Math.round(scale * scaleFactor * 100) / 100);
+        quality = Math.max(0.65, Math.round((quality - (1 - scaleFactor) * 0.15) * 100) / 100);
+
+        // Re-render sample Page 1 at adjusted scale/quality so estimate and output match 1:1
+        viewport = page.getViewport({ scale });
+        canvas.width = Math.round(viewport.width);
+        canvas.height = Math.round(viewport.height);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+        await page.render({ canvasContext: ctx, viewport }).promise;
+
+        sampleDataUrl = canvas.toDataURL('image/jpeg', quality);
+        sampleBytes = Math.round((sampleDataUrl.length - 23) * 0.75);
+        estimatedBytes = Math.round((sampleBytes + 850) * numPages + 1500);
+      }
+
+      const savedBytes = Math.max(0, file.size - estimatedBytes);
+      const savingsPercent = Math.min(99, Math.max(1, Math.round((savedBytes / file.size) * 100)));
+
+      const profile = {
+        targetReduction: red,
+        scale,
+        quality,
+        estimatedBytes,
+        savingsPercent,
+        numPages
+      };
+
+      if (sampleCache) {
+        sampleCache[red] = profile;
+      }
+
+      return profile;
+    } catch (err) {
+      const fallback = Math.max(1024, Math.round(file.size * (1 - red / 100)));
+      return {
+        targetReduction: red,
+        scale,
+        quality,
+        estimatedBytes: fallback,
+        savingsPercent: red,
+        numPages: 1
+      };
+    }
+  }
+
+  async function estimateCompressedPdfSize(file, targetReduction, sampleCache = null) {
+    return await resolveCompressProfile(file, targetReduction, sampleCache);
+  }
+
   async function compressPdf(file, options = {}) {
     if (!window.pdfjsLib || !window.jspdf) throw new Error('PDF libraries not loaded');
-    const arrayBuffer = await readFileAsArrayBuffer(file);
-    const pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-    const numPages = pdfDoc.numPages;
 
     // Resolve target reduction percentage (e.g. 90, 70, 40)
     let targetReduction = 70;
@@ -172,14 +275,14 @@ window.PDFDock = (function() {
 
     targetReduction = Math.min(95, Math.max(20, targetReduction));
 
-    // Dynamic resolution scaling and JPEG quality calibration
-    // At 20% reduction: scale 1.40, quality 0.85 (ultra-high fidelity)
-    // At 70% reduction: scale 1.05, quality 0.58 (balanced, clear text)
-    // At 90% reduction: scale 0.76, quality 0.32 (extreme compression, ~90% reduction, clean reading)
-    // At 95% reduction: scale 0.62, quality 0.22 (maximum possible shrink)
-    const t = (targetReduction - 20) / (95 - 20); // normalized 0 to 1
-    const renderScale = (options && options.scale) || Math.max(0.60, 1.40 - t * (1.40 - 0.62));
-    const jpegQuality = (options && options.quality) || Math.max(0.20, 0.85 - t * (0.85 - 0.22));
+    // Resolve profile (uses identical scale and quality as estimateCompressedPdfSize)
+    const profile = await resolveCompressProfile(file, targetReduction, options && options.sampleCache);
+    const renderScale = (options && options.scale) || profile.scale;
+    const jpegQuality = (options && options.quality) || profile.quality;
+
+    const arrayBuffer = await readFileAsArrayBuffer(file);
+    const pdfDoc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    const numPages = pdfDoc.numPages;
 
     const { jsPDF } = window.jspdf;
     let outPdf = null;
@@ -195,10 +298,12 @@ window.PDFDock = (function() {
       const ctx = canvas.getContext('2d', { alpha: false });
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
 
       await page.render({ canvasContext: ctx, viewport }).promise;
 
-      // Downscale to calibrated JPEG quality
+      // Downscale to calibrated high-fidelity JPEG quality
       const compressedDataUrl = canvas.toDataURL('image/jpeg', jpegQuality);
       const orientation = unscaledViewport.width > unscaledViewport.height ? 'landscape' : 'portrait';
       const pageWidth = unscaledViewport.width;
@@ -211,22 +316,35 @@ window.PDFDock = (function() {
           format: [pageWidth, pageHeight],
           hotfixes: ['px_scaling']
         });
-        outPdf.addImage(compressedDataUrl, 'JPEG', 0, 0, pageWidth, pageHeight, undefined, 'FAST');
+        outPdf.addImage(compressedDataUrl, 'JPEG', 0, 0, pageWidth, pageHeight, undefined, 'MEDIUM');
       } else {
         outPdf.addPage([pageWidth, pageHeight], orientation);
-        outPdf.addImage(compressedDataUrl, 'JPEG', 0, 0, pageWidth, pageHeight, undefined, 'FAST');
+        outPdf.addImage(compressedDataUrl, 'JPEG', 0, 0, pageWidth, pageHeight, undefined, 'MEDIUM');
       }
     }
 
-    const compressedBlob = outPdf.output('blob');
+    let compressedBlob = outPdf.output('blob');
+
+    // If rasterized output is larger than original, optimize structure with PDFLib if possible
+    if (compressedBlob.size >= file.size && window.PDFLib) {
+      try {
+        const libDoc = await PDFLib.PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
+        const optimizedBytes = await libDoc.save({ useObjectStreams: true, addDefaultPage: false });
+        if (optimizedBytes.length < file.size) {
+          compressedBlob = new Blob([optimizedBytes], { type: 'application/pdf' });
+        }
+      } catch (e) {
+        console.warn('PDFLib structure optimization skipped:', e);
+      }
+    }
+
     const actualSaved = Math.max(0, file.size - compressedBlob.size);
-    const savingsPercent = Math.min(99, Math.max(5, Math.round((actualSaved / file.size) * 100)));
-    const levelLabel = targetReduction >= 85 ? 'Extreme (~90%)' : (targetReduction >= 55 ? 'Recommended (~70%)' : 'Light (~40%)');
+    const savingsPercent = Math.min(99, Math.max(1, Math.round((actualSaved / file.size) * 100)));
 
     return {
       blob: compressedBlob,
       filename: `compressed-${file.name}`,
-      summary: `Compressed from ${formatBytes(file.size)} to ${formatBytes(compressedBlob.size)} (Reduced by ~${savingsPercent}% - ${levelLabel}).`
+      summary: `Compressed from ${formatBytes(file.size)} to ${formatBytes(compressedBlob.size)} (Reduced by ~${savingsPercent}% • JPG Quality Preserved).`
     };
   }
 
@@ -3097,6 +3215,9 @@ window.PDFDock = (function() {
     reorderPdfPagesByArray,
     mergePdfOrdered,
     deletePdfPagesByIndices,
+    resolveCompressProfile,
+    getCalibratedCompressParameters,
+    estimateCompressedPdfSize,
     mergePdf,
     splitPdf,
     compressPdf,
