@@ -1622,6 +1622,8 @@ for tool in tools_data:
     page_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Monetag In-Page Push / Vignette Ad Tag -->
+  <script>(function(s){{s.dataset.zone='11838397',s.src='https://nap5k.com/tag.min.js'}})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{tool["full_title"]} - Free Online PDF Tool | PDFDock</title>
@@ -3500,6 +3502,8 @@ index_schemas_json = json.dumps([
 index_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Monetag In-Page Push / Vignette Ad Tag -->
+  <script>(function(s){{s.dataset.zone='11838397',s.src='https://nap5k.com/tag.min.js'}})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PDFDock - Everything You Need, All in One Place | Free Online PDF Tools</title>
@@ -3749,6 +3753,8 @@ print("Generated index.html (PDFDock Main Portal)")
 not_found_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Monetag In-Page Push / Vignette Ad Tag -->
+  <script>(function(s){{s.dataset.zone='11838397',s.src='https://nap5k.com/tag.min.js'}})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Page Not Found | PDFDock</title>
